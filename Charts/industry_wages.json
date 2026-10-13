@@ -1,0 +1,141 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "width": 700,
+
+  "height": {
+    "step": 45
+  },
+
+  "params": [
+    {
+      "name": "selectedYear",
+      "value": 2021,
+      "bind": {
+        "input": "select",
+        "options": [2011, 2016, 2021],
+        "name": "Year: "
+      }
+    }
+  ],
+
+  "data": {
+    "url": "../data/industry_wages.csv"
+  },
+
+  "transform": [
+    {
+      "filter": "datum.year == selectedYear"
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "weekly_earnings",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.rank <= 5"
+    }
+  ],
+
+  "encoding": {
+    "y": {
+      "field": "industry",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null
+    }
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#d9d9d9",
+        "strokeWidth": 2
+      },
+
+      "encoding": {
+        "x": {
+          "field": "weekly_earnings",
+          "type": "quantitative"
+        },
+
+        "x2": {
+          "value": 0
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 250,
+        "color": "#4C78A8"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "weekly_earnings",
+          "type": "quantitative",
+          "title": "Average Weekly Earnings ($)"
+        },
+
+        "tooltip": [
+          {
+            "field": "industry",
+            "title": "Industry"
+          },
+          {
+            "field": "weekly_earnings",
+            "title": "Weekly Earnings ($)",
+            "format": ",.1f"
+          }
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "weekly_earnings",
+          "type": "quantitative"
+        },
+
+        "text": {
+          "field": "weekly_earnings",
+          "format": ",.0f"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "gridColor": "#d9d9d9",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    }
+  }
+}

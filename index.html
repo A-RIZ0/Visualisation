@@ -1,11 +1,411 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Census Visualisation</title>
-</head>
-<body>
-    
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>How Australia Changed | Census 2011-2021</title>
+
+    <!-- =========================
+         VEGA / VEGA-LITE
+    ========================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         HERO / INTRODUCTION
+    ========================== -->
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">AUSTRALIAN CENSUS · 2011 · 2016 · 2021</p>
+
+        <h1>How Australia Changed</h1>
+
+        <p class="hero-subtitle">
+          Exploring population, education, employment, family structure and
+          language across Australian society.
+        </p>
+
+        <p class="hero-intro">
+          Australia's population has changed considerably over the past decade,
+          but population growth is only part of the story. Changes in age,
+          education, employment, family structure and language reveal how
+          Australian society itself has evolved.
+        </p>
+
+        <div class="year-row" aria-label="Census years">
+          <span>2011</span>
+
+          <span class="year-arrow"> </span>
+
+          <span>2016</span>
+
+          <span class="year-arrow"> </span>
+
+          <span>2021</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- =========================
+             SECTION 1: POPULATION
+        ========================== -->
+
+      <section class="story-section">
+        <div class="section-heading">
+          <p class="section-number">01 · POPULATION</p>
+
+          <p>
+            Population growth was not evenly distributed across the country.
+            Explore where Australia's population changed most between 2011 and
+            2021.
+          </p>
+        </div>
+
+        <div class="viz-layout">
+          <!-- =========================
+                     IDIOM 01
+                ========================== -->
+
+          <article class="chart-card">
+            <div class="chart-header">
+              <h3>Population change across Australia</h3>
+
+              <p>Percentage change in population by region, 2011-2021.</p>
+            </div>
+
+            <div class="chart-container" id="population-map"></div>
+          </article>
+
+          <!-- =========================
+                     IDIOM 02
+                ========================== -->
+
+          <article class="chart-card">
+            <div class="chart-header">
+              <h3>Australia's changing age structure (2011 - 2021)</h3>
+            </div>
+
+            <div class="chart-container" id="population-pyramid"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================
+             SECTION 2: EDUCATION
+        ========================== -->
+
+      <section class="story-section">
+        <div class="section-heading">
+          <p class="section-number">02 · EDUCATION</p>
+
+          <h2>Education levels increased - but not everywhere equally</h2>
+
+          <p>
+            Educational attainment rose across Australia. Compare the change
+            over time and see how it varies geographically.
+          </p>
+        </div>
+
+        <div class="viz-layout">
+          <article class="chart-card">
+            <div class="chart-header">
+              <p class="chart-number">IDIOM 03 · ADVANCED</p>
+
+              <h3>Higher education over time</h3>
+
+              <p>Bachelor degree or above by state and Census year.</p>
+            </div>
+
+            <div class="chart-container" id="education-heatmap"></div>
+          </article>
+
+          <article class="chart-card">
+            <div class="chart-header">
+              <p class="chart-number">IDIOM 04 · MAP</p>
+
+              <h3>Where is higher education concentrated?</h3>
+
+              <p>Regional differences in Bachelor degree attainment.</p>
+            </div>
+
+            <div class="chart-container" id="education-map"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================
+             SECTION 3: EMPLOYMENT
+        ========================== -->
+
+      <section class="story-section">
+        <div class="section-heading">
+          <p class="section-number">03 · EMPLOYMENT</p>
+
+          <h2>Australia's workforce changed with its population</h2>
+
+          <p>
+            Changes in industry reveal how the work Australians do has evolved
+            between Census years.
+          </p>
+        </div>
+
+        <div class="viz-layout">
+          <article class="chart-card">
+            <div class="chart-header">
+              <p class="chart-number">IDIOM 05 · ADVANCED</p>
+
+              <h3>How Australia's industries changed</h3>
+
+              <p>Employment by broad industry across Census years.</p>
+            </div>
+
+            <div
+              class="chart-container chart-container-tall"
+              id="employment-dumbbell"
+            ></div>
+          </article>
+
+          <article class="chart-card">
+            <div class="chart-header">
+
+              <h3>How has employment changed over a decade</h3>
+            </div>
+
+            <div
+              class="chart-container chart-container-tall"
+              id="employment-composition"
+            ></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================
+             SECTION 4: REGIONAL DIFFERENCES
+        ========================== -->
+
+      <section class="story-section">
+        <div class="section-heading">
+          <p class="section-number">04 · REGIONAL DIFFERENCES</p>
+
+          <h2>Different parts of Australia have different profiles</h2>
+
+          <p>
+            Looking at several Census measures together reveals how states and
+            territories differ from one another.
+          </p>
+        </div>
+
+        <div class="viz-layout">
+          <article class="chart-card">
+            <div class="chart-header">
+              <p class="chart-number">IDIOM 07 · ADVANCED</p>
+
+              <h3>Comparing Australian states</h3>
+
+              <p>Multiple Census measures shown together.</p>
+            </div>
+
+            <div
+              class="chart-container chart-container-tall"
+              id="education-preuni"
+            ></div>
+          </article>
+
+          <article class="chart-card">
+            <div class="chart-header">
+              <p class="chart-number">IDIOM 08 · ADVANCED</p>
+
+              <h3>How state rankings changed</h3>
+
+              <p>State and territory median-age rankings over time.</p>
+            </div>
+
+            <div class="chart-container" id="median-age"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================
+             SECTION 5: FAMILY
+        ========================== -->
+
+      <section class="story-section">
+        <div class="section-heading">
+          <p class="section-number">05 · FAMILY STRUCTURE</p>
+
+          <h2>Australian families also changed</h2>
+
+          <p>
+            Compare different family structures and see how their proportions
+            shifted between Census years.
+          </p>
+        </div>
+
+        <div class="viz-layout">
+          <article class="chart-card">
+            <div class="chart-header">
+              <p class="chart-number">IDIOM 09 · ADVANCED</p>
+
+              <h3>Changing family structure</h3>
+
+              <p>Compare selected family types between Census years.</p>
+            </div>
+
+            <div class="chart-container" id="family-bar"></div>
+          </article>
+
+          <article class="chart-card text-card">
+            <div class="insight-label">STORY BREAK</div>
+
+            <h3>Population change is also social change</h3>
+
+            <p>
+              The Census does more than count people. It provides a picture of
+              how households, work, education and culture change over time.
+            </p>
+
+            <p class="small-note">
+              This card is intentionally text-based and can later be replaced or
+              expanded with a supporting statistic.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================
+             SECTION 6: LANGUAGE
+        ========================== -->
+
+      <section class="story-section">
+        <div class="section-heading">
+          <p class="section-number">06 · INCOME</p>
+
+          <h2>Australia became more linguistically diverse</h2>
+
+          <p>
+            Explore where languages other than English are spoken at home and
+            how this varies across Australian regions.
+          </p>
+        </div>
+
+        <div class="viz-layout">
+          <article class="chart-card">
+            <div class="chart-header">
+              <p class="chart-number">IDIOM 10 · MAP</p>
+
+              <h3>Where is linguistic diversity concentrated?</h3>
+
+              <p>
+                Percentage of people using a language other than English at
+                home.
+              </p>
+            </div>
+
+            <div class="chart-container" id="industry-income"></div>
+          </article>
+
+          <article class="chart-card">
+            <div class="chart-header">
+              <p class="chart-number">IDIOM 11 · ADVANCED</p>
+
+              <h3>How language patterns changed</h3>
+
+              <p>
+                Change in non-English language use across states and
+                territories.
+              </p>
+            </div>
+
+            <div class="chart-container" id="income-map"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================
+             CONCLUSION
+        ========================== -->
+
+      <section class="conclusion">
+        <p class="section-number">CONCLUSION</p>
+
+        <h2>Australia changed in size, structure and diversity.</h2>
+
+        <p>
+          Across three Census years, the data shows changes in where Australians
+          live, their age, educational attainment, work, family structures and
+          languages used at home.
+        </p>
+
+        <p class="source-note">
+          Data source: Australian Bureau of Statistics Census of Population and
+          Housing.
+        </p>
+      </section>
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+      <p>Australian Census visualisation · Vega-Lite</p>
+    </footer>
+
+    <!-- =========================
+         VEGA-LITE CHARTS
+    ========================== -->
+
+    <script>
+      vegaEmbed("#population-pyramid", "charts/population_pyramid.json", {
+        actions: false
+      });
+
+      vegaEmbed("#population-map", "charts/population_map.json", {
+        actions: false
+      });
+
+      vegaEmbed("#education-heatmap", "charts/education_heatmap.json", {
+        actions: false
+      });
+      vegaEmbed("#employment-dumbbell", "charts/employment_dumbbell.json", {
+        actions: false
+      });
+      vegaEmbed("#median-age", "charts/median_age.json", {
+        actions: false
+      });
+
+      vegaEmbed("#employment-composition", "charts/employment_composition.json", {
+        actions: false
+      });
+      vegaEmbed("#family-bar", "charts/family_composition.json", {
+        actions: false
+      });
+      vegaEmbed("#education-preuni", "charts/education_preuni.json", {
+        actions: false
+      });
+      vegaEmbed("#industry-income", "charts/industry_wages.json", {
+        actions: false
+      });
+      vegaEmbed("#income-map", "charts/income_map.json", {
+        actions: false
+      });
+
+    </script>
+  </body>
+</html>x

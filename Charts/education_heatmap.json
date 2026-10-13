@@ -1,0 +1,187 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "description": "Heatmap showing the percentage of people aged 15 years and over with a non-school qualification who have a Bachelor degree level or above, across Australian states and territories and Census years.",
+
+  "width": "container",
+  "height": 420,
+
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+
+  "data": {
+    "url": "../data/education_heatmap.csv"
+  },
+
+  "transform": [
+
+    {
+      "fold": [
+        "education_2011",
+        "education_2016",
+        "education_2021"
+      ],
+      "as": [
+        "Year",
+        "EducationPercentage"
+      ]
+    },
+
+    {
+      "calculate": "replace(datum.Year, 'education_', '')",
+      "as": "CensusYear"
+    }
+
+  ],
+
+  "layer": [
+
+    {
+      "mark": {
+        "type": "rect"
+      },
+
+      "encoding": {
+
+        "x": {
+          "field": "CensusYear",
+          "type": "ordinal",
+          "title": "Census year",
+          "sort": [
+            "2011",
+            "2016",
+            "2021"
+          ],
+
+          "axis": {
+            "labelAngle": 0
+          }
+        },
+
+        "y": {
+          "field": "State",
+          "type": "ordinal",
+          "title": null,
+
+          "sort": [
+            "ACT",
+            "NSW",
+            "NT",
+            "QLD",
+            "SA",
+            "TAS",
+            "VIC",
+            "WA"
+          ]
+        },
+
+        "color": {
+          "field": "EducationPercentage",
+          "type": "quantitative",
+
+          "title": "Bachelor degree level or above (%)",
+
+          "scale": {
+            "scheme": "blues"
+          },
+
+          "legend": {
+            "format": ".0f"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "State",
+            "type": "nominal",
+            "title": "State"
+          },
+
+          {
+            "field": "CensusYear",
+            "type": "ordinal",
+            "title": "Census year"
+          },
+
+          {
+            "field": "EducationPercentage",
+            "type": "quantitative",
+            "title": "Bachelor degree level or above",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+
+      "encoding": {
+
+        "x": {
+          "field": "CensusYear",
+          "type": "ordinal",
+          "sort": [
+            "2011",
+            "2016",
+            "2021"
+          ]
+        },
+
+        "y": {
+          "field": "State",
+          "type": "ordinal",
+
+          "sort": [
+            "ACT",
+            "NSW",
+            "NT",
+            "QLD",
+            "SA",
+            "TAS",
+            "VIC",
+            "WA"
+          ]
+        },
+
+        "text": {
+          "field": "EducationPercentage",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+
+        "color": {
+          "condition": {
+            "test": "datum.EducationPercentage > 43",
+            "value": "white"
+          },
+          "value": "black"
+        }
+      }
+    }
+
+  ],
+
+  "config": {
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    }, 
+
+    "axisY": {
+      "labelFontWeight": "bold"
+    }
+
+  }
+}

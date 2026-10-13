@@ -1,0 +1,154 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "description": "Population pyramid showing Australia's population by age and sex for selected Census years.",
+
+  "width": "container",
+  "height": 420,
+
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+
+  "data": {
+    "url": "../data/population_pyramid.csv"
+  },
+
+  "params": [
+    {
+      "name": "censusYear",
+      "value": 2011,
+
+      "bind": {
+        "input": "select",
+        "options": [2011, 2016, 2021],
+        "name": "Census year: "
+      }
+    }
+  ],
+
+  "transform": [
+    {
+      "filter": "datum.Year == censusYear"
+    },
+    {
+      "filter": "datum['Age Group'] != '100+' && datum['Age Group'] != '95-99'"
+    },
+    {
+      "calculate": "abs(datum.Population)",
+      "as": "AbsPopulation"
+    }
+  ],
+
+  "layer": [
+    {
+      "mark": {
+        "type": "bar"
+      },
+
+      "encoding": {
+        "y": {
+          "field": "Age Group",
+          "type": "ordinal",
+          "title": "Age group",
+          "sort": [
+            "90-94",
+            "85-89",
+            "80-84",
+            "75-79",
+            "70-74",
+            "65-69",
+            "60-64",
+            "55-59",
+            "50-54",
+            "45-49",
+            "40-44",
+            "35-39",
+            "30-34",
+            "25-29",
+            "20-24",
+            "15-19",
+            "10-14",
+            "5-9",
+            "0-4"
+          ]
+        },
+
+        "x": {
+          "field": "Population",
+          "type": "quantitative",
+          "title": "Population",
+          "scale": {
+            "domain": [
+              -910000,
+              910000
+            ]
+          },
+          "axis": {
+            "labelExpr": "datum.value == 0 ? '0' : format(abs(datum.value) / 1000, '.0f') + 'k'",
+            "grid": true
+          }
+        },
+
+        "color": {
+          "field": "Sex",
+          "type": "nominal",
+          "title": "Sex",
+          "sort": ["Male", "Female"] 
+          
+        },
+
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "ordinal",
+            "title": "Census year"
+          },
+          {
+            "field": "Age Group",
+            "type": "ordinal",
+            "title": "Age group"
+          },
+          {
+            "field": "Sex",
+            "type": "nominal",
+            "title": "Sex"
+          },
+          {
+            "field": "AbsPopulation",
+            "type": "quantitative",
+            "title": "Population",
+            "format": ","
+    
+          }
+          
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    },
+    "legend": {
+      "orient": "top"
+    }
+  }
+}

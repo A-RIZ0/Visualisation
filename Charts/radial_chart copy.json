@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "width": 550,
+  "height": 550,
+
+  "params": [
+    {
+      "name": "selectedYear",
+      "value": 2021,
+      "bind": {
+        "input": "select",
+        "options": [2011, 2016, 2021],
+        "name": "Census Year: "
+      }
+    }
+  ],
+
+  "data": {
+    "url": "../data/employment_radial.csv"
+  },
+
+  "transform": [
+    {
+      "filter": "datum.year == selectedYear"
+    }
+  ],
+
+  "mark": {
+    "type": "arc",
+    "innerRadius": 50,
+    "stroke": "white",
+    "strokeWidth": 2
+  },
+
+  "encoding": {
+    "theta": {
+      "field": "category",
+      "type": "nominal",
+      "sort": {
+        "field": "employment_share",
+        "order": "descending"
+      }
+    },
+
+    "radius": {
+      "field": "employment_share",
+      "type": "quantitative",
+      "scale": {
+        "domain": [0, 40]
+      }
+    },
+
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "title": "Industry Group",
+      "scale": {
+        "domain": [
+          "Public & Community Services",
+          "Trade Transport & Hospitality",
+          "Professional & Business Services",
+          "Manufacturing & Construction",
+          "Primary & Utilities"
+        ],
+        "range": [
+          "#0072B2",
+          "#E69F00",
+          "#009E73",
+          "#CC79A7",
+          "#56B4E9"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "vertical",
+        "titleFontSize": 12,
+        "labelFontSize": 11
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "category",
+        "title": "Category"
+      },
+      {
+        "field": "employed_persons",
+        "title": "Employed Persons",
+        "format": ","
+      },
+      {
+        "field": "employment_share",
+        "title": "Employment Share (%)",
+        "format": ".2f"
+      }
+    ]
+  },
+
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

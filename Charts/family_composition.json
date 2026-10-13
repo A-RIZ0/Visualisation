@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "data": {
+    "values": [
+      {"Year": 2011, "FamilyType": "Couple family without children", "Percentage": 37.8},
+      {"Year": 2011, "FamilyType": "Couple family with children", "Percentage": 44.6},
+      {"Year": 2011, "FamilyType": "One parent family", "Percentage": 15.9},
+      {"Year": 2011, "FamilyType": "Other family", "Percentage": 1.7},
+
+      {"Year": 2016, "FamilyType": "Couple family without children", "Percentage": 37.8},
+      {"Year": 2016, "FamilyType": "Couple family with children", "Percentage": 44.7},
+      {"Year": 2016, "FamilyType": "One parent family", "Percentage": 15.8},
+      {"Year": 2016, "FamilyType": "Other family", "Percentage": 1.7},
+
+      {"Year": 2021, "FamilyType": "Couple family without children", "Percentage": 38.8},
+      {"Year": 2021, "FamilyType": "Couple family with children", "Percentage": 43.7},
+      {"Year": 2021, "FamilyType": "One parent family", "Percentage": 15.9},
+      {"Year": 2021, "FamilyType": "Other family", "Percentage": 1.6}
+    ]
+  },
+
+  "mark": "bar",
+
+  "encoding": {
+    "x": {
+      "field": "FamilyType",
+      "type": "nominal",
+      "title": "Family Type",
+      "sort": "-y",
+      "axis": {
+        "labelAngle": -20
+      }
+    },
+    "xOffset": {
+      "field": "Year"
+    },
+    "y": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "title": "Percentage (%)"
+    },
+    "color": {
+      "field": "Year",
+      "type": "nominal",
+      "scale": {
+        "range": ["#1f77b4", "#ff7f0e", "#2ca02c"]
+      }
+    },
+    "tooltip": [
+      {"field": "Year"},
+      {"field": "FamilyType"},
+      {"field": "Percentage", "format": ".1f"}
+    ]
+  },
+
+  "width": 500,
+  "height": 300
+}

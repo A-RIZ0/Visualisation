@@ -1,0 +1,130 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 700,
+  "height": 350,
+  "data": {
+    "url": "../data/education_preuni.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(replace(datum.population_total, ',', ''))",
+      "as": "population"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "population",
+          "as": "year_total"
+        }
+      ],
+      "groupby": ["year"]
+    },
+    {
+      "calculate": "datum.population / datum.year_total",
+      "as": "share"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "point": {
+          "filled": true,
+          "size": 120
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": "Census Year"
+        },
+        "y": {
+          "field": "share",
+          "type": "quantitative",
+          "title": "Share of Population",
+          "axis": {
+            "format": ".0%"
+          }
+        },
+        "color": {
+          "field": "completed_year",
+          "type": "nominal",
+          "title": "Highest Year Completed",
+          "scale": {
+            "scheme": "tableau10"
+          },
+          "sort": [
+            "Did not go to school",
+            "Year 8 or below ",
+            "Year 9 or equivalent",
+            "Year 10 or equivalent",
+            "Year 11 or equivalent",
+            "Year 12 or equivalent"
+          ]
+        },
+        "tooltip": [
+          {
+            "field": "completed_year",
+            "title": "Completed Year"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "share",
+            "type": "quantitative",
+            "format": ".1%",
+            "title": "Share"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2021"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 11
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "share",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "completed_year"
+        },
+        "color": {
+          "field": "completed_year",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "scheme": "tableau10"
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13
+    }
+  }
+}

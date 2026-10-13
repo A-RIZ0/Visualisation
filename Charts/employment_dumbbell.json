@@ -1,0 +1,179 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "width": "container",
+
+  "height": {
+    "step": 65
+  },
+
+  "data": {
+    "url": "../data/employment_share.csv"
+  },
+
+  "transform": [
+    {
+      "pivot": "year",
+      "value": "employment_share",
+      "groupby": ["industry"]
+    },
+    {
+      "calculate": "datum['2021'] - datum['2011']",
+      "as": "change"
+    },
+    {
+      "calculate": "datum.industry == 'Health care and social assistance' ? 'Health Care' : datum.industry == 'Professional, scientific and technical services' ? 'Professional Services' : datum.industry == 'Transport, postal and warehousing' ? 'Transport' : datum.industry == 'Accommodation and food services' ? 'Accommodation & Food' : datum.industry",
+      "as": "industry_short"
+    },
+    {
+      "calculate": "15.3",
+      "as": "label_pos"
+    }
+  ],
+
+  "encoding": {
+    "y": {
+      "field": "industry_short",
+      "type": "nominal",
+      "sort": {
+        "field": "change",
+        "order": "descending"
+      },
+      "title": null
+    }
+  },
+
+  "layer": [
+    {
+      "transform": [
+        {
+          "fold": ["2011", "2016", "2021"],
+          "as": ["year", "value"]
+        }
+      ],
+
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2,
+        "color": "#bdbdbd"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "value",
+          "type": "quantitative",
+          "title": "Employment Share (%)",
+          "scale": {
+            "domain": [4, 16]
+          }
+        },
+
+        "detail": {
+          "field": "industry"
+        }
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "fold": ["2011", "2016", "2021"],
+          "as": ["year", "value"]
+        }
+      ],
+
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 220
+      },
+
+      "encoding": {
+        "x": {
+          "field": "value",
+          "type": "quantitative"
+        },
+
+        "color": {
+          "field": "year",
+          "type": "nominal",
+          "title": "Census Year",
+          "scale": {
+            "domain": ["2011", "2016", "2021"],
+            "range": [
+              "#4C78A8",
+              "#59A14F",
+              "#F28E2B"
+            ]
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "industry",
+            "title": "Industry"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "value",
+            "title": "Employment Share (%)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "label_pos",
+          "type": "quantitative"
+        },
+
+        "text": {
+          "field": "change",
+          "format": "+.2f"
+        },
+
+        "color": {
+          "condition": {
+            "test": "datum.change > 0",
+            "value": "#2ca02c"
+          },
+          "value": "#d62728"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+
+    "legend": {
+      "orient": "top",
+      "direction": "horizontal",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    },
+
+    "axis": {
+      "gridColor": "#d9d9d9",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "labelLimit": 140
+    }
+  }
+}

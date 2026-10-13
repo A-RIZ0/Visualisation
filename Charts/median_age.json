@@ -1,0 +1,188 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "width": "container",
+
+  "height": {
+    "step": 65
+  },
+
+  "data": {
+    "url": "../data/median_age.csv"
+  },
+
+  "transform": [
+    {
+      "pivot": "Year",
+      "value": "median_age",
+      "groupby": ["State"]
+    },
+    {
+      "calculate": "datum['2021'] - datum['2011']",
+      "as": "change"
+    }
+  ],
+
+  "encoding": {
+    "y": {
+      "field": "State",
+      "type": "nominal",
+      "sort": {
+        "field": "2021",
+        "order": "descending"
+      },
+      "title": null
+    }
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#bdbdbd"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "2011",
+          "type": "quantitative",
+          "title": "Median Age (Years)",
+          "scale": {
+            "domain": [30, 43]
+          }
+        },
+
+        "x2": {
+          "field": "2021"
+        }
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "fold": ["2011", "2016", "2021"],
+          "as": ["year", "age"]
+        }
+      ],
+
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2
+      },
+
+      "encoding": {
+        "x": {
+          "field": "age",
+          "type": "quantitative"
+        },
+
+        "detail": {
+          "field": "State"
+        },
+
+        "color": {
+          "value": "#bdbdbd"
+        }
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "fold": ["2011", "2016", "2021"],
+          "as": ["year", "age"]
+        }
+      ],
+
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 220
+      },
+
+      "encoding": {
+        "x": {
+          "field": "age",
+          "type": "quantitative"
+        },
+
+        "color": {
+          "field": "year",
+          "type": "nominal",
+          "title": "Census Year",
+          "scale": {
+            "domain": ["2011", "2016", "2021"],
+            "range": [
+              "#4C78A8",
+              "#59A14F",
+              "#F28E2B"
+            ]
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "State",
+            "title": "State"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "age",
+            "title": "Median Age"
+          }
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontWeight": "bold",
+        "fontSize": 11
+      },
+
+      "encoding": {
+        "x": {
+          "field": "2021",
+          "type": "quantitative"
+        },
+
+        "text": {
+          "field": "change",
+          "format": "+.0f"
+        },
+
+        "color": {
+          "value": "#444444"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+
+    "legend": {
+      "orient": "top",
+      "direction": "horizontal",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    },
+
+    "axis": {
+      "gridColor": "#d9d9d9",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    }
+  }
+}

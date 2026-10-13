@@ -1,0 +1,98 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "width": "container",
+  "height": 600,
+
+  "data": {
+    "url": "../data/SA2_2021_AUST_GDA2020.json",
+    "format": {
+      "type": "topojson",
+      "feature": "SA2_2021_AUST_GDA2020"
+    }
+  },
+
+  "transform": [
+    {
+      "lookup": "properties.SA2_CODE21",
+      "from": {
+        "data": {
+          "url": "../data/population_map.csv"
+        },
+        "key": "region_id",
+        "fields": [
+          "pop2011",
+          "pop2021",
+          "growth_pct"
+        ]
+      }
+    }
+  ],
+
+  "projection": {
+    "type": "equalEarth"
+  },
+
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.25
+  },
+
+  "encoding": {
+    "color": {
+      "condition": {
+        "test": "datum.growth_pct != null",
+        "field": "growth_pct",
+        "type": "quantitative",
+        "title": "Population Growth (%)",
+        "scale": {
+          "scheme": "redblue",
+          "domain": [-100, 100],
+          "domainMid": 0,
+          "clamp": true
+        }
+      },
+      "value": "#d9d9d9"
+    },
+
+    "tooltip": [
+      {
+        "field": "properties.SA2_NAME21",
+        "type": "nominal",
+        "title": "Region"
+      },
+      {
+        "field": "pop2011",
+        "type": "quantitative",
+        "title": "2011 Population",
+        "format": ","
+      },
+      {
+        "field": "pop2021",
+        "type": "quantitative",
+        "title": "2021 Population",
+        "format": ","
+      },
+      {
+        "field": "growth_pct",
+        "type": "quantitative",
+        "title": "Growth (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+
+    "legend": {
+      "orient": "bottom",
+      "gradientLength": 300,
+      "titleFontSize": 12,
+      "labelFontSize": 11
+    }
+  }
+} 
