@@ -23,7 +23,7 @@
   "layer": [
     {
       "data": {
-        "url": "../data/STE_2021_AUST_GDA2020.json",
+        "url": "data/STE_2021_AUST_GDA2020.json",
         "format": {
           "type": "topojson",
           "feature": "STE_2021_AUST_GDA2020"
@@ -40,7 +40,7 @@
 
     {
       "data": {
-        "url": "../data/median_weekly_income.csv"
+        "url": "data/median_weekly_income.csv"
       },
 
       "transform": [
