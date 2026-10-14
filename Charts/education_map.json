@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "width": "container",
+  "height": 600,
+
+  "projection": {
+    "type": "equalEarth"
+  },
+
+  "params": [
+    {
+      "name": "selectedYear",
+      "value": 2021,
+      "bind": {
+        "input": "select",
+        "options": [2011, 2016, 2021],
+        "name": "Census year: "
+      }
+    }
+  ],
+
+  "layer": [
+    {
+      "data": {
+        "url": "../data/SA3_2021_AUST_GDA2020.json",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f0f0f0",
+        "stroke": "#999",
+        "strokeWidth": 0.8
+      }
+    },
+
+    {
+      "data": {
+        "url": "../data/education_tiles.csv"
+      },
+
+      "transform": [
+        {
+          "filter": "datum.Year == selectedYear && isValid(datum.Education_Attainment)"
+        }
+      ],
+
+      "mark": {
+        "type": "point",
+        "shape": "M 0,-1 L 0.866,-0.5 L 0.866,0.5 L 0,1 L -0.866,0.5 L -0.866,-0.5 Z",
+        "filled": true,
+        "size": 300,
+        "stroke": "white",
+        "strokeWidth": 0.7
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+
+        "color": {
+          "field": "Education_Attainment",
+          "type": "quantitative",
+          "title": "Education attainment (%)",
+          "scale": {
+            "type": "quantize",
+            "domain": [0, 50],
+            "scheme": "blues"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "Label",
+            "title": "SA3 region"
+          },
+          {
+            "field": "Code",
+            "title": "SA3 code"
+          },
+          {
+            "field": "Year",
+            "title": "Census year"
+          },
+          {
+            "field": "Education_Attainment",
+            "title": "Education attainment (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

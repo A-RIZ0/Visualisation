@@ -17,7 +17,7 @@
   ],
 
   "data": {
-    "url": "../data/employment_radial.csv"
+    "url": "../data/employment_composition.csv"
   },
 
   "transform": [

@@ -1,0 +1,1021 @@
+Code,Label,Year,Education_Attainmnet
+10102,Queanbeyan,2011,20.8
+10102,Queanbeyan,2016,22.9
+10102,Queanbeyan,2021,28
+10103,Snowy Mountains,2011,12.9
+10103,Snowy Mountains,2016,14.7
+10103,Snowy Mountains,2021,18.7
+10104,South Coast,2011,12.2
+10104,South Coast,2016,14.1
+10104,South Coast,2021,17.7
+10105,Goulburn - Mulwaree,2011,10
+10105,Goulburn - Mulwaree,2016,11.5
+10105,Goulburn - Mulwaree,2021,14.2
+10106,Young - Yass,2011,14.5
+10106,Young - Yass,2016,16.2
+10106,Young - Yass,2021,19.1
+10201,Gosford,2011,14.3
+10201,Gosford,2016,17.8
+10201,Gosford,2021,22.4
+10202,Wyong,2011,8
+10202,Wyong,2016,9.9
+10202,Wyong,2021,13
+10301,Bathurst,2011,13.5
+10301,Bathurst,2016,15.4
+10301,Bathurst,2021,18.3
+10302,Lachlan Valley,2011,8
+10302,Lachlan Valley,2016,9.2
+10302,Lachlan Valley,2021,11.2
+10303,Lithgow - Mudgee,2011,8.6
+10303,Lithgow - Mudgee,2016,9.8
+10303,Lithgow - Mudgee,2021,12.5
+10304,Orange,2011,13.6
+10304,Orange,2016,16.5
+10304,Orange,2021,20.2
+10401,Clarence Valley,2011,8.5
+10401,Clarence Valley,2016,10
+10401,Clarence Valley,2021,11.7
+10402,Coffs Harbour,2011,13
+10402,Coffs Harbour,2016,15.4
+10402,Coffs Harbour,2021,18.7
+10501,Bourke - Cobar - Coonamble,2011,8
+10501,Bourke - Cobar - Coonamble,2016,8.8
+10501,Bourke - Cobar - Coonamble,2021,10.2
+10502,Broken Hill and Far West,2011,7
+10502,Broken Hill and Far West,2016,8.2
+10502,Broken Hill and Far West,2021,10.2
+10503,Dubbo,2011,10.5
+10503,Dubbo,2016,12.4
+10503,Dubbo,2021,15.3
+10601,Lower Hunter,2011,7.8
+10601,Lower Hunter,2016,8.8
+10601,Lower Hunter,2021,10.7
+10602,Maitland,2011,11.5
+10602,Maitland,2016,13.1
+10602,Maitland,2021,15.8
+10603,Port Stephens,2011,9.6
+10603,Port Stephens,2016,11
+10603,Port Stephens,2021,13.6
+10604,Upper Hunter,2011,8.3
+10604,Upper Hunter,2016,9.2
+10604,Upper Hunter,2021,10.3
+10701,Dapto - Port Kembla,2011,8.9
+10701,Dapto - Port Kembla,2016,11.3
+10701,Dapto - Port Kembla,2021,14.7
+10702,Illawarra Catchment Reserve,2011,0
+10702,Illawarra Catchment Reserve,2016,0
+10702,Illawarra Catchment Reserve,2021,0
+10703,Kiama - Shellharbour,2011,11.5
+10703,Kiama - Shellharbour,2016,13.8
+10703,Kiama - Shellharbour,2021,17.5
+10704,Wollongong,2011,21.5
+10704,Wollongong,2016,24.9
+10704,Wollongong,2021,30.1
+10801,Great Lakes,2011,8
+10801,Great Lakes,2016,9.5
+10801,Great Lakes,2021,12
+10802,Kempsey - Nambucca,2011,8.1
+10802,Kempsey - Nambucca,2016,9
+10802,Kempsey - Nambucca,2021,11.3
+10803,Lord Howe Island,2011,11.6
+10803,Lord Howe Island,2016,17
+10803,Lord Howe Island,2021,19.2
+10804,Port Macquarie,2011,11.1
+10804,Port Macquarie,2016,13.4
+10804,Port Macquarie,2021,16.9
+10805,Taree - Gloucester,2011,8.5
+10805,Taree - Gloucester,2016,9.8
+10805,Taree - Gloucester,2021,12.1
+10901,Albury,2011,13.5
+10901,Albury,2016,15.2
+10901,Albury,2021,18.3
+10902,Lower Murray,2011,7.7
+10902,Lower Murray,2016,8.4
+10902,Lower Murray,2021,9.9
+10903,Upper Murray exc. Albury,2011,8.2
+10903,Upper Murray exc. Albury,2016,9.4
+10903,Upper Murray exc. Albury,2021,11.3
+11001,Armidale,2011,19.2
+11001,Armidale,2016,21.9
+11001,Armidale,2021,24.8
+11002,Inverell - Tenterfield,2011,8.1
+11002,Inverell - Tenterfield,2016,8.8
+11002,Inverell - Tenterfield,2021,10.6
+11003,Moree - Narrabri,2011,9.1
+11003,Moree - Narrabri,2016,10.3
+11003,Moree - Narrabri,2021,11.5
+11004,Tamworth - Gunnedah,2011,9.7
+11004,Tamworth - Gunnedah,2016,11.5
+11004,Tamworth - Gunnedah,2021,13.8
+11101,Lake Macquarie - East,2011,14.1
+11101,Lake Macquarie - East,2016,17
+11101,Lake Macquarie - East,2021,21
+11102,Lake Macquarie - West,2011,10.9
+11102,Lake Macquarie - West,2016,13.1
+11102,Lake Macquarie - West,2021,15.9
+11103,Newcastle,2011,19.2
+11103,Newcastle,2016,22.9
+11103,Newcastle,2021,27.6
+11201,Richmond Valley - Coastal,2011,17.8
+11201,Richmond Valley - Coastal,2016,20.1
+11201,Richmond Valley - Coastal,2021,25.3
+11202,Richmond Valley - Hinterland,2011,12.7
+11202,Richmond Valley - Hinterland,2016,14
+11202,Richmond Valley - Hinterland,2021,16.9
+11203,Tweed Valley,2011,11
+11203,Tweed Valley,2016,13.4
+11203,Tweed Valley,2021,17.7
+11301,Griffith - Murrumbidgee (West),2011,8.6
+11301,Griffith - Murrumbidgee (West),2016,9.9
+11301,Griffith - Murrumbidgee (West),2021,12.5
+11302,Tumut - Tumbarumba,2011,8
+11302,Tumut - Tumbarumba,2016,9.7
+11302,Tumut - Tumbarumba,2021,11.9
+11303,Wagga Wagga,2011,12.4
+11303,Wagga Wagga,2016,14.2
+11303,Wagga Wagga,2021,16.8
+11401,Shoalhaven,2011,10.2
+11401,Shoalhaven,2016,12.2
+11401,Shoalhaven,2021,15.7
+11402,Southern Highlands,2011,17.5
+11402,Southern Highlands,2016,20.4
+11402,Southern Highlands,2021,25.6
+11501,Baulkham Hills,2011,30.7
+11501,Baulkham Hills,2016,36.2
+11501,Baulkham Hills,2021,42.9
+11502,Dural - Wisemans Ferry,2011,21.2
+11502,Dural - Wisemans Ferry,2016,23.9
+11502,Dural - Wisemans Ferry,2021,27
+11503,Hawkesbury,2011,13.4
+11503,Hawkesbury,2016,15.1
+11503,Hawkesbury,2021,17.3
+11504,Rouse Hill - McGraths Hill,2011,19.5
+11504,Rouse Hill - McGraths Hill,2016,24.1
+11504,Rouse Hill - McGraths Hill,2021,35.2
+11601,Blacktown,2011,17.7
+11601,Blacktown,2016,22.4
+11601,Blacktown,2021,27.8
+11602,Blacktown - North,2011,24.4
+11602,Blacktown - North,2016,30.2
+11602,Blacktown - North,2021,40.3
+11603,Mount Druitt,2011,11.4
+11603,Mount Druitt,2016,15.3
+11603,Mount Druitt,2021,18.5
+11701,Botany,2011,20.1
+11701,Botany,2016,27
+11701,Botany,2021,35.3
+11702,Marrickville - Sydenham - Petersham,2011,32.7
+11702,Marrickville - Sydenham - Petersham,2016,38.5
+11702,Marrickville - Sydenham - Petersham,2021,45.9
+11703,Sydney Inner City,2011,40.3
+11703,Sydney Inner City,2016,44.1
+11703,Sydney Inner City,2021,52.7
+11801,Eastern Suburbs - North,2011,41.9
+11801,Eastern Suburbs - North,2016,46.6
+11801,Eastern Suburbs - North,2021,53.6
+11802,Eastern Suburbs - South,2011,33
+11802,Eastern Suburbs - South,2016,37.5
+11802,Eastern Suburbs - South,2021,43.3
+11901,Bankstown,2011,13.6
+11901,Bankstown,2016,17.6
+11901,Bankstown,2021,21.6
+11902,Canterbury,2011,17.6
+11902,Canterbury,2016,22
+11902,Canterbury,2021,25.3
+11903,Hurstville,2011,24.9
+11903,Hurstville,2016,29.2
+11903,Hurstville,2021,33.2
+11904,Kogarah - Rockdale,2011,22.4
+11904,Kogarah - Rockdale,2016,28.4
+11904,Kogarah - Rockdale,2021,33.3
+12001,Canada Bay,2011,32.3
+12001,Canada Bay,2016,37.7
+12001,Canada Bay,2021,42.8
+12002,Leichhardt,2011,44.3
+12002,Leichhardt,2016,47
+12002,Leichhardt,2021,52.7
+12003,Strathfield - Burwood - Ashfield,2011,32.3
+12003,Strathfield - Burwood - Ashfield,2016,37.3
+12003,Strathfield - Burwood - Ashfield,2021,42.8
+12101,Chatswood - Lane Cove,2011,44.6
+12101,Chatswood - Lane Cove,2016,48.8
+12101,Chatswood - Lane Cove,2021,54.7
+12102,Hornsby,2011,32.8
+12102,Hornsby,2016,37.8
+12102,Hornsby,2021,43.9
+12103,Ku-ring-gai,2011,43.3
+12103,Ku-ring-gai,2016,47.9
+12103,Ku-ring-gai,2021,53.7
+12104,North Sydney - Mosman,2011,47.7
+12104,North Sydney - Mosman,2016,52
+12104,North Sydney - Mosman,2021,57.7
+12201,Manly,2011,40.1
+12201,Manly,2016,45.5
+12201,Manly,2021,51.5
+12202,Pittwater,2011,25.2
+12202,Pittwater,2016,28.6
+12202,Pittwater,2021,33.2
+12203,Warringah,2011,26
+12203,Warringah,2016,30.1
+12203,Warringah,2021,35.8
+12301,Camden,2011,14
+12301,Camden,2016,16.4
+12301,Camden,2021,19.2
+12302,Campbelltown (NSW),2011,11.5
+12302,Campbelltown (NSW),2016,15.4
+12302,Campbelltown (NSW),2021,20.8
+12303,Wollondilly,2011,11
+12303,Wollondilly,2016,12.6
+12303,Wollondilly,2021,14.2
+12401,Blue Mountains,2011,24.1
+12401,Blue Mountains,2016,27.5
+12401,Blue Mountains,2021,32.7
+12402,Blue Mountains - South,2011,0
+12402,Blue Mountains - South,2016,0
+12402,Blue Mountains - South,2021,0
+12403,Penrith,2011,11.4
+12403,Penrith,2016,14.6
+12403,Penrith,2021,18.5
+12404,Richmond - Windsor,2011,9.5
+12404,Richmond - Windsor,2016,10.7
+12404,Richmond - Windsor,2021,13.9
+12405,St Marys,2011,8.9
+12405,St Marys,2016,11
+12405,St Marys,2021,14.4
+12501,Auburn,2011,21.3
+12501,Auburn,2016,25.7
+12501,Auburn,2021,32.9
+12502,Carlingford,2011,27.3
+12502,Carlingford,2016,32.2
+12502,Carlingford,2021,38.2
+12503,Merrylands - Guildford,2011,13.5
+12503,Merrylands - Guildford,2016,16.9
+12503,Merrylands - Guildford,2021,20
+12504,Parramatta,2011,30.2
+12504,Parramatta,2016,37.4
+12504,Parramatta,2021,44.1
+12601,Pennant Hills - Epping,2011,41.2
+12601,Pennant Hills - Epping,2016,46.4
+12601,Pennant Hills - Epping,2021,53.4
+12602,Ryde - Hunters Hill,2011,33.9
+12602,Ryde - Hunters Hill,2016,39.5
+12602,Ryde - Hunters Hill,2021,46.3
+12701,Bringelly - Green Valley,2011,9.7
+12701,Bringelly - Green Valley,2016,13.5
+12701,Bringelly - Green Valley,2021,19.5
+12702,Fairfield,2011,9.3
+12702,Fairfield,2016,11.4
+12702,Fairfield,2021,13.3
+12703,Liverpool,2011,14.5
+12703,Liverpool,2016,17.8
+12703,Liverpool,2021,22.8
+12801,Cronulla - Miranda - Caringbah,2011,19.6
+12801,Cronulla - Miranda - Caringbah,2016,23.3
+12801,Cronulla - Miranda - Caringbah,2021,28
+12802,Sutherland - Menai - Heathcote,2011,19.9
+12802,Sutherland - Menai - Heathcote,2016,23.7
+12802,Sutherland - Menai - Heathcote,2021,28.1
+20101,Ballarat,2011,16.1
+20101,Ballarat,2016,18.9
+20101,Ballarat,2021,23.1
+20102,Creswick - Daylesford - Ballan,2011,15.5
+20102,Creswick - Daylesford - Ballan,2016,17.7
+20102,Creswick - Daylesford - Ballan,2021,21.9
+20103,Maryborough - Pyrenees,2011,8
+20103,Maryborough - Pyrenees,2016,9
+20103,Maryborough - Pyrenees,2021,11
+20201,Bendigo,2011,14.5
+20201,Bendigo,2016,16.7
+20201,Bendigo,2021,20.2
+20202,Heathcote - Castlemaine - Kyneton,2011,17.6
+20202,Heathcote - Castlemaine - Kyneton,2016,21
+20202,Heathcote - Castlemaine - Kyneton,2021,26.6
+20203,Loddon - Elmore,2011,8.5
+20203,Loddon - Elmore,2016,9.4
+20203,Loddon - Elmore,2021,11.3
+20301,Barwon - West,2011,14.1
+20301,Barwon - West,2016,15.8
+20301,Barwon - West,2021,18.5
+20302,Geelong,2011,15.2
+20302,Geelong,2016,18.3
+20302,Geelong,2021,23.9
+20303,Surf Coast - Bellarine Peninsula,2011,20.9
+20303,Surf Coast - Bellarine Peninsula,2016,23.9
+20303,Surf Coast - Bellarine Peninsula,2021,29.4
+20401,Upper Goulburn Valley,2011,10.9
+20401,Upper Goulburn Valley,2016,12
+20401,Upper Goulburn Valley,2021,14.9
+20402,Wangaratta - Benalla,2011,11.7
+20402,Wangaratta - Benalla,2016,13.2
+20402,Wangaratta - Benalla,2021,16.1
+20403,Wodonga - Alpine,2011,12.5
+20403,Wodonga - Alpine,2016,14.5
+20403,Wodonga - Alpine,2021,18.1
+20501,Baw Baw,2011,12.5
+20501,Baw Baw,2016,13.9
+20501,Baw Baw,2021,16.8
+20502,Gippsland - East,2011,10.1
+20502,Gippsland - East,2016,11.1
+20502,Gippsland - East,2021,13.6
+20503,Gippsland - South West,2011,11.7
+20503,Gippsland - South West,2016,13
+20503,Gippsland - South West,2021,17.3
+20504,Latrobe Valley,2011,9.7
+20504,Latrobe Valley,2016,10.8
+20504,Latrobe Valley,2021,12.5
+20505,Wellington,2011,9.8
+20505,Wellington,2016,11.4
+20505,Wellington,2021,13.8
+20601,Brunswick - Coburg,2011,35.3
+20601,Brunswick - Coburg,2016,41.1
+20601,Brunswick - Coburg,2021,48.6
+20602,Darebin - South,2011,39.3
+20602,Darebin - South,2016,43.7
+20602,Darebin - South,2021,51.1
+20603,Essendon,2011,32.3
+20603,Essendon,2016,37.2
+20603,Essendon,2021,43
+20604,Melbourne City,2011,42.9
+20604,Melbourne City,2016,44.9
+20604,Melbourne City,2021,54.2
+20605,Port Phillip,2011,42.2
+20605,Port Phillip,2016,43.6
+20605,Port Phillip,2021,48.9
+20606,Stonnington - West,2011,43.8
+20606,Stonnington - West,2016,47.2
+20606,Stonnington - West,2021,54.3
+20607,Yarra,2011,44.6
+20607,Yarra,2016,48.2
+20607,Yarra,2021,56.1
+20701,Boroondara,2011,43.2
+20701,Boroondara,2016,47
+20701,Boroondara,2021,52.2
+20702,Manningham - West,2011,28.4
+20702,Manningham - West,2016,32.7
+20702,Manningham - West,2021,38.9
+20703,Whitehorse - West,2011,32.6
+20703,Whitehorse - West,2016,37.1
+20703,Whitehorse - West,2021,42.8
+20801,Bayside,2011,34.9
+20801,Bayside,2016,39.1
+20801,Bayside,2021,44
+20802,Glen Eira,2011,35.6
+20802,Glen Eira,2016,40.5
+20802,Glen Eira,2021,46.2
+20803,Kingston,2011,21.7
+20803,Kingston,2016,26.1
+20803,Kingston,2021,31.8
+20804,Stonnington - East,2011,42.5
+20804,Stonnington - East,2016,46.9
+20804,Stonnington - East,2021,51.1
+20901,Banyule,2011,27.2
+20901,Banyule,2016,31.9
+20901,Banyule,2021,37.8
+20902,Darebin - North,2011,21.1
+20902,Darebin - North,2016,26.6
+20902,Darebin - North,2021,33.2
+20903,Nillumbik - Kinglake,2011,24.2
+20903,Nillumbik - Kinglake,2016,27.5
+20903,Nillumbik - Kinglake,2021,31.1
+20904,Whittlesea - Wallan,2011,13.2
+20904,Whittlesea - Wallan,2016,17.4
+20904,Whittlesea - Wallan,2021,22.8
+21001,Keilor,2011,18.4
+21001,Keilor,2016,22.2
+21001,Keilor,2021,27.4
+21002,Macedon Ranges,2011,18.6
+21002,Macedon Ranges,2016,20.9
+21002,Macedon Ranges,2021,24.7
+21003,Moreland - North,2011,17.4
+21003,Moreland - North,2016,24.4
+21003,Moreland - North,2021,31.8
+21004,Sunbury,2011,12.2
+21004,Sunbury,2016,14.7
+21004,Sunbury,2021,19.2
+21005,Tullamarine - Broadmeadows,2011,10.7
+21005,Tullamarine - Broadmeadows,2016,14.7
+21005,Tullamarine - Broadmeadows,2021,20.5
+21101,Knox,2011,17.9
+21101,Knox,2016,22.4
+21101,Knox,2021,28
+21102,Manningham - East,2011,27.7
+21102,Manningham - East,2016,30.7
+21102,Manningham - East,2021,35.4
+21103,Maroondah,2011,19.8
+21103,Maroondah,2016,24.2
+21103,Maroondah,2021,30
+21104,Whitehorse - East,2011,28.2
+21104,Whitehorse - East,2016,33.8
+21104,Whitehorse - East,2021,39.7
+21105,Yarra Ranges,2011,14.6
+21105,Yarra Ranges,2016,17.2
+21105,Yarra Ranges,2021,21.4
+21201,Cardinia,2011,11.3
+21201,Cardinia,2016,13.7
+21201,Cardinia,2021,19.1
+21202,Casey - North,2011,14.4
+21202,Casey - North,2016,17.8
+21202,Casey - North,2021,22.4
+21203,Casey - South,2011,11.5
+21203,Casey - South,2016,15.6
+21203,Casey - South,2021,21.6
+21204,Dandenong,2011,14.1
+21204,Dandenong,2016,17.7
+21204,Dandenong,2021,22.6
+21205,Monash,2011,29.9
+21205,Monash,2016,34.6
+21205,Monash,2021,41.1
+21301,Brimbank,2011,13.1
+21301,Brimbank,2016,15.9
+21301,Brimbank,2021,19.7
+21302,Hobsons Bay,2011,21.5
+21302,Hobsons Bay,2016,26.5
+21302,Hobsons Bay,2021,32.2
+21303,Maribyrnong,2011,28.2
+21303,Maribyrnong,2016,34
+21303,Maribyrnong,2021,40.8
+21304,Melton - Bacchus Marsh,2011,13.4
+21304,Melton - Bacchus Marsh,2016,15.7
+21304,Melton - Bacchus Marsh,2021,21
+21305,Wyndham,2011,18.5
+21305,Wyndham,2016,24.3
+21305,Wyndham,2021,32.3
+21401,Frankston,2011,12
+21401,Frankston,2016,14.6
+21401,Frankston,2021,18.7
+21402,Mornington Peninsula,2011,14.8
+21402,Mornington Peninsula,2016,17.1
+21402,Mornington Peninsula,2021,21.5
+21501,Grampians,2011,9.3
+21501,Grampians,2016,10.8
+21501,Grampians,2021,12.8
+21502,Mildura,2011,9.2
+21502,Mildura,2016,10.3
+21502,Mildura,2021,12.8
+21503,Murray River - Swan Hill,2011,8.2
+21503,Murray River - Swan Hill,2016,8.7
+21503,Murray River - Swan Hill,2021,10.6
+21601,Campaspe,2011,8.8
+21601,Campaspe,2016,9.9
+21601,Campaspe,2021,11.8
+21602,Moira,2011,7.4
+21602,Moira,2016,8.7
+21602,Moira,2021,10.4
+21603,Shepparton,2011,10.5
+21603,Shepparton,2016,12.2
+21603,Shepparton,2021,14.8
+21701,Glenelg - Southern Grampians,2011,9.9
+21701,Glenelg - Southern Grampians,2016,11
+21701,Glenelg - Southern Grampians,2021,13.1
+21703,Colac - Corangamite,2011,9.5
+21703,Colac - Corangamite,2016,11.1
+21703,Colac - Corangamite,2021,14
+21704,Warrnambool,2011,13
+21704,Warrnambool,2016,15.1
+21704,Warrnambool,2021,18.8
+30101,Capalaba,2011,14
+30101,Capalaba,2016,16.6
+30101,Capalaba,2021,19.9
+30102,Cleveland - Stradbroke,2011,13.5
+30102,Cleveland - Stradbroke,2016,15.5
+30102,Cleveland - Stradbroke,2021,18.3
+30103,Wynnum - Manly,2011,18.2
+30103,Wynnum - Manly,2016,21.7
+30103,Wynnum - Manly,2021,26.8
+30201,Bald Hills - Everton Park,2011,22.7
+30201,Bald Hills - Everton Park,2016,26.9
+30201,Bald Hills - Everton Park,2021,32.7
+30202,Chermside,2011,23.4
+30202,Chermside,2016,27.5
+30202,Chermside,2021,32.7
+30203,Nundah,2011,20.7
+30203,Nundah,2016,25.8
+30203,Nundah,2021,32.1
+30204,Sandgate,2011,16.4
+30204,Sandgate,2016,20.9
+30204,Sandgate,2021,25.2
+30301,Carindale,2011,27.2
+30301,Carindale,2016,32.2
+30301,Carindale,2021,38.6
+30302,Holland Park - Yeronga,2011,34.5
+30302,Holland Park - Yeronga,2016,39
+30302,Holland Park - Yeronga,2021,45.2
+30303,Mt Gravatt,2011,26.4
+30303,Mt Gravatt,2016,31.8
+30303,Mt Gravatt,2021,37.9
+30304,Nathan,2011,28.5
+30304,Nathan,2016,33.7
+30304,Nathan,2021,40.1
+30305,Rocklea - Acacia Ridge,2011,21.1
+30305,Rocklea - Acacia Ridge,2016,26.4
+30305,Rocklea - Acacia Ridge,2021,31.6
+30306,Sunnybank,2011,25.8
+30306,Sunnybank,2016,30.1
+30306,Sunnybank,2021,33.4
+30401,Centenary,2011,31.1
+30401,Centenary,2016,33.9
+30401,Centenary,2021,38.6
+30402,Kenmore - Brookfield - Moggill,2011,39.9
+30402,Kenmore - Brookfield - Moggill,2016,42.9
+30402,Kenmore - Brookfield - Moggill,2021,48.1
+30403,Sherwood - Indooroopilly,2011,42.6
+30403,Sherwood - Indooroopilly,2016,45
+30403,Sherwood - Indooroopilly,2021,50.5
+30404,The Gap - Enoggera,2011,28
+30404,The Gap - Enoggera,2016,31.6
+30404,The Gap - Enoggera,2021,37.3
+30501,Brisbane Inner,2011,38.2
+30501,Brisbane Inner,2016,41.4
+30501,Brisbane Inner,2021,46.5
+30502,Brisbane Inner - East,2011,34.6
+30502,Brisbane Inner - East,2016,38.3
+30502,Brisbane Inner - East,2021,44
+30503,Brisbane Inner - North,2011,36.5
+30503,Brisbane Inner - North,2016,39.8
+30503,Brisbane Inner - North,2021,45.7
+30504,Brisbane Inner - West,2011,43.9
+30504,Brisbane Inner - West,2016,46.9
+30504,Brisbane Inner - West,2021,52.7
+30601,Cairns - North,2011,17.8
+30601,Cairns - North,2016,20.4
+30601,Cairns - North,2021,23.7
+30602,Cairns - South,2011,12.3
+30602,Cairns - South,2016,14.4
+30602,Cairns - South,2021,16.9
+30603,Innisfail - Cassowary Coast,2011,7.3
+30603,Innisfail - Cassowary Coast,2016,8.4
+30603,Innisfail - Cassowary Coast,2021,9.7
+30604,Port Douglas - Daintree,2011,11.8
+30604,Port Douglas - Daintree,2016,13.4
+30604,Port Douglas - Daintree,2021,15.9
+30605,Tablelands (East) - Kuranda,2011,10.5
+30605,Tablelands (East) - Kuranda,2016,11.7
+30605,Tablelands (East) - Kuranda,2021,13.8
+30701,Darling Downs (West) - Maranoa,2011,9.1
+30701,Darling Downs (West) - Maranoa,2016,9.9
+30701,Darling Downs (West) - Maranoa,2021,11.6
+30702,Darling Downs - East,2011,7.9
+30702,Darling Downs - East,2016,8.9
+30702,Darling Downs - East,2021,10.4
+30703,Granite Belt,2011,9.3
+30703,Granite Belt,2016,10.3
+30703,Granite Belt,2021,12
+30801,Central Highlands (Qld),2011,9.4
+30801,Central Highlands (Qld),2016,10.2
+30801,Central Highlands (Qld),2021,11.1
+30803,Rockhampton,2011,11
+30803,Rockhampton,2016,12
+30803,Rockhampton,2021,13.9
+30804,Biloela,2011,8.8
+30804,Biloela,2016,9.6
+30804,Biloela,2021,10
+30805,Gladstone,2011,9.7
+30805,Gladstone,2016,11.2
+30805,Gladstone,2021,12
+30901,Broadbeach - Burleigh,2011,16.2
+30901,Broadbeach - Burleigh,2016,20.4
+30901,Broadbeach - Burleigh,2021,26.2
+30902,Coolangatta,2011,13
+30902,Coolangatta,2016,16.6
+30902,Coolangatta,2021,22.8
+30903,Gold Coast - North,2011,12.9
+30903,Gold Coast - North,2016,15.5
+30903,Gold Coast - North,2021,19.2
+30904,Gold Coast Hinterland,2011,16.4
+30904,Gold Coast Hinterland,2016,18
+30904,Gold Coast Hinterland,2021,21.8
+30905,Mudgeeraba - Tallebudgera,2011,15.3
+30905,Mudgeeraba - Tallebudgera,2016,19
+30905,Mudgeeraba - Tallebudgera,2021,23.3
+30906,Nerang,2011,11.8
+30906,Nerang,2016,14.5
+30906,Nerang,2021,18.3
+30907,Ormeau - Oxenford,2011,12.3
+30907,Ormeau - Oxenford,2016,14.1
+30907,Ormeau - Oxenford,2021,18
+30908,Robina,2011,16
+30908,Robina,2016,19.6
+30908,Robina,2021,25.2
+30909,Southport,2011,16.4
+30909,Southport,2016,19.2
+30909,Southport,2021,24
+30910,Surfers Paradise,2011,18
+30910,Surfers Paradise,2016,21.7
+30910,Surfers Paradise,2021,26.3
+31001,Forest Lake - Oxley,2011,14.3
+31001,Forest Lake - Oxley,2016,17
+31001,Forest Lake - Oxley,2021,21.1
+31002,Ipswich Hinterland,2011,7.2
+31002,Ipswich Hinterland,2016,8.2
+31002,Ipswich Hinterland,2021,10.1
+31003,Ipswich Inner,2011,10.6
+31003,Ipswich Inner,2016,12.1
+31003,Ipswich Inner,2021,14.9
+31004,Springfield - Redbank,2011,11
+31004,Springfield - Redbank,2016,13.7
+31004,Springfield - Redbank,2021,18
+31101,Beaudesert,2011,7.2
+31101,Beaudesert,2016,7.7
+31101,Beaudesert,2021,9.4
+31102,Beenleigh,2011,7.3
+31102,Beenleigh,2016,8.7
+31102,Beenleigh,2021,11.3
+31103,Browns Plains,2011,7.4
+31103,Browns Plains,2016,8.9
+31103,Browns Plains,2021,11.7
+31104,Jimboomba,2011,8.6
+31104,Jimboomba,2016,9.5
+31104,Jimboomba,2021,12
+31105,Loganlea - Carbrook,2011,11.2
+31105,Loganlea - Carbrook,2016,13.1
+31105,Loganlea - Carbrook,2021,15.9
+31106,Springwood - Kingston,2011,11.8
+31106,Springwood - Kingston,2016,14.7
+31106,Springwood - Kingston,2021,17
+31201,Bowen Basin - North,2011,8.6
+31201,Bowen Basin - North,2016,9.2
+31201,Bowen Basin - North,2021,9.1
+31202,Mackay,2011,9.3
+31202,Mackay,2016,10.6
+31202,Mackay,2021,12.2
+31203,Whitsunday,2011,9.1
+31203,Whitsunday,2016,10.5
+31203,Whitsunday,2021,13.7
+31301,Bribie - Beachmere,2011,8
+31301,Bribie - Beachmere,2016,9.4
+31301,Bribie - Beachmere,2021,11.8
+31302,Caboolture,2011,6.9
+31302,Caboolture,2016,8
+31302,Caboolture,2021,10.3
+31303,Caboolture Hinterland,2011,7.4
+31303,Caboolture Hinterland,2016,8
+31303,Caboolture Hinterland,2021,11
+31304,Narangba - Burpengary,2011,8.3
+31304,Narangba - Burpengary,2016,9.9
+31304,Narangba - Burpengary,2021,12.3
+31305,Redcliffe,2011,11.2
+31305,Redcliffe,2016,13
+31305,Redcliffe,2021,16.3
+31401,The Hills District,2011,21.3
+31401,The Hills District,2016,24.4
+31401,The Hills District,2021,28.4
+31402,North Lakes,2011,12.9
+31402,North Lakes,2016,15.5
+31402,North Lakes,2021,20
+31403,Strathpine,2011,11
+31403,Strathpine,2016,12.4
+31403,Strathpine,2021,15.6
+31501,Far North,2011,7.5
+31501,Far North,2016,7.5
+31501,Far North,2021,8.8
+31502,Outback - North,2011,9.5
+31502,Outback - North,2016,11
+31502,Outback - North,2021,12.4
+31503,Outback - South,2011,8.8
+31503,Outback - South,2016,10.3
+31503,Outback - South,2021,11.4
+31601,Buderim,2011,16.6
+31601,Buderim,2016,20.1
+31601,Buderim,2021,24.9
+31602,Caloundra,2011,12.8
+31602,Caloundra,2016,15.4
+31602,Caloundra,2021,20.7
+31603,Maroochy,2011,14.5
+31603,Maroochy,2016,17.9
+31603,Maroochy,2021,22.9
+31605,Noosa,2011,16.1
+31605,Noosa,2016,19.3
+31605,Noosa,2021,24.9
+31606,Sunshine Coast Hinterland,2011,14
+31606,Sunshine Coast Hinterland,2016,16.1
+31606,Sunshine Coast Hinterland,2021,20.1
+31607,Nambour,2011,12.4
+31607,Nambour,2016,14.4
+31607,Nambour,2021,18.1
+31608,Noosa Hinterland,2011,14
+31608,Noosa Hinterland,2016,16.6
+31608,Noosa Hinterland,2021,19.8
+31701,Toowoomba,2011,14.7
+31701,Toowoomba,2016,17
+31701,Toowoomba,2021,20.1
+31801,Charters Towers - Ayr - Ingham,2011,6.9
+31801,Charters Towers - Ayr - Ingham,2016,7.6
+31801,Charters Towers - Ayr - Ingham,2021,8.8
+31802,Townsville,2011,14.1
+31802,Townsville,2016,15.7
+31802,Townsville,2021,18.2
+31901,Bundaberg,2011,8.8
+31901,Bundaberg,2016,10
+31901,Bundaberg,2021,12
+31902,Burnett,2011,7.2
+31902,Burnett,2016,7.9
+31902,Burnett,2021,8.8
+31903,Gympie - Cooloola,2011,7.7
+31903,Gympie - Cooloola,2016,8.4
+31903,Gympie - Cooloola,2021,10.3
+31904,Hervey Bay,2011,8.9
+31904,Hervey Bay,2016,10.7
+31904,Hervey Bay,2021,12.9
+31905,Maryborough,2011,6.6
+31905,Maryborough,2016,7
+31905,Maryborough,2021,8.4
+40101,Adelaide City,2011,35.8
+40101,Adelaide City,2016,37.3
+40101,Adelaide City,2021,45.5
+40102,Adelaide Hills,2011,21.8
+40102,Adelaide Hills,2016,24.1
+40102,Adelaide Hills,2021,27.8
+40103,Burnside,2011,37.3
+40103,Burnside,2016,42.1
+40103,Burnside,2021,47.7
+40104,Campbelltown (SA),2011,21
+40104,Campbelltown (SA),2016,25.5
+40104,Campbelltown (SA),2021,32.6
+40105,Norwood - Payneham - St Peters,2011,32.5
+40105,Norwood - Payneham - St Peters,2016,36.7
+40105,Norwood - Payneham - St Peters,2021,42.5
+40106,Prospect - Walkerville,2011,30.7
+40106,Prospect - Walkerville,2016,34.8
+40106,Prospect - Walkerville,2021,41.3
+40107,Unley,2011,36.7
+40107,Unley,2016,40.7
+40107,Unley,2021,46.6
+40201,Gawler - Two Wells,2011,8.9
+40201,Gawler - Two Wells,2016,10.1
+40201,Gawler - Two Wells,2021,12.4
+40202,Playford,2011,4.8
+40202,Playford,2016,6.3
+40202,Playford,2021,8.3
+40203,Port Adelaide - East,2011,18.4
+40203,Port Adelaide - East,2016,23.5
+40203,Port Adelaide - East,2021,30.5
+40204,Salisbury,2011,9.1
+40204,Salisbury,2016,11.6
+40204,Salisbury,2021,15
+40205,Tea Tree Gully,2011,14.2
+40205,Tea Tree Gully,2016,17.2
+40205,Tea Tree Gully,2021,21
+40301,Holdfast Bay,2011,23.7
+40301,Holdfast Bay,2016,27.4
+40301,Holdfast Bay,2021,32.6
+40302,Marion,2011,17.9
+40302,Marion,2016,22.1
+40302,Marion,2021,27.9
+40303,Mitcham,2011,31.3
+40303,Mitcham,2016,35.1
+40303,Mitcham,2021,40
+40304,Onkaparinga,2011,11.7
+40304,Onkaparinga,2016,13.5
+40304,Onkaparinga,2021,16.7
+40401,Charles Sturt,2011,16.2
+40401,Charles Sturt,2016,20.1
+40401,Charles Sturt,2021,25.9
+40402,Port Adelaide - West,2011,12.8
+40402,Port Adelaide - West,2016,15.1
+40402,Port Adelaide - West,2021,19.8
+40403,West Torrens,2011,21.3
+40403,West Torrens,2016,25.7
+40403,West Torrens,2021,32.3
+40501,Barossa,2011,10.5
+40501,Barossa,2016,11.9
+40501,Barossa,2021,14.5
+40502,Lower North,2011,9.1
+40502,Lower North,2016,10.2
+40502,Lower North,2021,12.1
+40503,Mid North,2011,7
+40503,Mid North,2016,7.8
+40503,Mid North,2021,9.5
+40504,Yorke Peninsula,2011,6
+40504,Yorke Peninsula,2016,7.1
+40504,Yorke Peninsula,2021,8.3
+40601,Eyre Peninsula and South West,2011,8.2
+40601,Eyre Peninsula and South West,2016,9.2
+40601,Eyre Peninsula and South West,2021,10.7
+40602,Outback - North and East,2011,8.2
+40602,Outback - North and East,2016,9
+40602,Outback - North and East,2021,10.1
+40701,Fleurieu - Kangaroo Island,2011,10.7
+40701,Fleurieu - Kangaroo Island,2016,12.4
+40701,Fleurieu - Kangaroo Island,2021,15.3
+40702,Limestone Coast,2011,8.1
+40702,Limestone Coast,2016,9.1
+40702,Limestone Coast,2021,11.1
+40703,Murray and Mallee,2011,6.5
+40703,Murray and Mallee,2016,7.5
+40703,Murray and Mallee,2021,9
+50101,Augusta - Margaret River - Busselton,2011,13.7
+50101,Augusta - Margaret River - Busselton,2016,16
+50101,Augusta - Margaret River - Busselton,2021,19.3
+50102,Bunbury,2011,10
+50102,Bunbury,2016,11.5
+50102,Bunbury,2021,13.1
+50103,Manjimup,2011,10.5
+50103,Manjimup,2016,11.2
+50103,Manjimup,2021,13.5
+50201,Mandurah,2011,8.1
+50201,Mandurah,2016,10.1
+50201,Mandurah,2021,11.5
+50301,Cottesloe - Claremont,2011,42.8
+50301,Cottesloe - Claremont,2016,48.1
+50301,Cottesloe - Claremont,2021,52.6
+50302,Perth City,2011,38.2
+50302,Perth City,2016,42.2
+50302,Perth City,2021,48.2
+50401,Bayswater - Bassendean,2011,20.2
+50401,Bayswater - Bassendean,2016,24.9
+50401,Bayswater - Bassendean,2021,29.1
+50402,Mundaring,2011,14.2
+50402,Mundaring,2016,16.1
+50402,Mundaring,2021,18.4
+50403,Swan,2011,10.8
+50403,Swan,2016,14.1
+50403,Swan,2021,17
+50501,Joondalup,2011,19.5
+50501,Joondalup,2016,23.5
+50501,Joondalup,2021,27
+50502,Stirling,2011,23.7
+50502,Stirling,2016,28.1
+50502,Stirling,2021,32.7
+50503,Wanneroo,2011,11.9
+50503,Wanneroo,2016,14.7
+50503,Wanneroo,2021,17.2
+50601,Armadale,2011,10.6
+50601,Armadale,2016,16
+50601,Armadale,2021,19.8
+50602,Belmont - Victoria Park,2011,22.2
+50602,Belmont - Victoria Park,2016,26.3
+50602,Belmont - Victoria Park,2021,31.4
+50603,Canning,2011,23.9
+50603,Canning,2016,28.8
+50603,Canning,2021,34.2
+50604,Gosnells,2011,12.5
+50604,Gosnells,2016,17.3
+50604,Gosnells,2021,20.5
+50605,Kalamunda,2011,14
+50605,Kalamunda,2016,17
+50605,Kalamunda,2021,19.6
+50606,Serpentine - Jarrahdale,2011,8.9
+50606,Serpentine - Jarrahdale,2016,11.3
+50606,Serpentine - Jarrahdale,2021,13.2
+50607,South Perth,2011,33.8
+50607,South Perth,2016,38
+50607,South Perth,2021,42.9
+50701,Cockburn,2011,15.9
+50701,Cockburn,2016,19.9
+50701,Cockburn,2021,24.3
+50702,Fremantle,2011,30.4
+50702,Fremantle,2016,34.4
+50702,Fremantle,2021,39.9
+50703,Kwinana,2011,8.1
+50703,Kwinana,2016,14.3
+50703,Kwinana,2021,17
+50704,Melville,2011,28.8
+50704,Melville,2016,33.2
+50704,Melville,2021,38.3
+50705,Rockingham,2011,8.9
+50705,Rockingham,2016,10.6
+50705,Rockingham,2021,12.5
+50901,Albany,2011,11.4
+50901,Albany,2016,12.8
+50901,Albany,2021,15.3
+50902,Wheat Belt - North,2011,8.3
+50902,Wheat Belt - North,2016,8.9
+50902,Wheat Belt - North,2021,10.3
+50903,Wheat Belt - South,2011,9.3
+50903,Wheat Belt - South,2016,9.9
+50903,Wheat Belt - South,2021,11.4
+51001,Kimberley,2011,12.1
+51001,Kimberley,2016,14
+51001,Kimberley,2021,15.8
+51002,East Pilbara,2011,10.1
+51002,East Pilbara,2016,10.7
+51002,East Pilbara,2021,11.5
+51003,West Pilbara,2011,10.9
+51003,West Pilbara,2016,12.6
+51003,West Pilbara,2021,14.2
+51101,Esperance,2011,9
+51101,Esperance,2016,9.6
+51101,Esperance,2021,11.9
+51102,Gascoyne,2011,9.3
+51102,Gascoyne,2016,11.3
+51102,Gascoyne,2021,13.8
+51103,Goldfields,2011,9.5
+51103,Goldfields,2016,10.9
+51103,Goldfields,2021,11.9
+51104,Mid West,2011,8.8
+51104,Mid West,2016,10
+51104,Mid West,2021,11.3
+60101,Brighton,2011,4.9
+60101,Brighton,2016,6
+60101,Brighton,2021,9.3
+60102,Hobart - North East,2011,16.3
+60102,Hobart - North East,2016,18.8
+60102,Hobart - North East,2021,26
+60103,Hobart - North West,2011,7.9
+60103,Hobart - North West,2016,9.7
+60103,Hobart - North West,2021,20
+60104,Hobart - South and West,2011,23.8
+60104,Hobart - South and West,2016,26.5
+60104,Hobart - South and West,2021,34.3
+60105,Hobart Inner,2011,35.5
+60105,Hobart Inner,2016,39.7
+60105,Hobart Inner,2021,49
+60106,Sorell - Dodges Ferry,2011,10.1
+60106,Sorell - Dodges Ferry,2016,11.4
+60106,Sorell - Dodges Ferry,2021,16.1
+60201,Launceston,2011,14.6
+60201,Launceston,2016,16.5
+60201,Launceston,2021,22.1
+60202,Meander Valley - West Tamar,2011,10.6
+60202,Meander Valley - West Tamar,2016,12.1
+60202,Meander Valley - West Tamar,2021,14.6
+60203,North East,2011,8.7
+60203,North East,2016,9.9
+60203,North East,2021,12.9
+60301,Central Highlands (Tas.),2011,6.8
+60301,Central Highlands (Tas.),2016,7.9
+60301,Central Highlands (Tas.),2021,9.8
+60302,Huon - Bruny Island,2011,14.7
+60302,Huon - Bruny Island,2016,17.1
+60302,Huon - Bruny Island,2021,21.7
+60303,South East Coast,2011,9.8
+60303,South East Coast,2016,10.9
+60303,South East Coast,2021,16.8
+60401,Burnie - Ulverstone,2011,8.7
+60401,Burnie - Ulverstone,2016,9.8
+60401,Burnie - Ulverstone,2021,12.8
+60402,Devonport,2011,8.8
+60402,Devonport,2016,10.1
+60402,Devonport,2021,13.4
+60403,West Coast,2011,7.4
+60403,West Coast,2016,8.3
+60403,West Coast,2021,11.3
+70101,Darwin City,2011,23.8
+70101,Darwin City,2016,29.2
+70101,Darwin City,2021,38.2
+70102,Darwin Suburbs,2011,20
+70102,Darwin Suburbs,2016,24.4
+70102,Darwin Suburbs,2021,30.5
+70103,Litchfield,2011,9.8
+70103,Litchfield,2016,9.2
+70103,Litchfield,2021,12
+70104,Palmerston,2011,10.6
+70104,Palmerston,2016,14
+70104,Palmerston,2021,17.6
+70201,Alice Springs,2011,15.4
+70201,Alice Springs,2016,17.1
+70201,Alice Springs,2021,21.4
+70202,Barkly,2011,8.1
+70202,Barkly,2016,9.4
+70202,Barkly,2021,11.2
+70203,Daly - Tiwi - West Arnhem,2011,7
+70203,Daly - Tiwi - West Arnhem,2016,6.8
+70203,Daly - Tiwi - West Arnhem,2021,6.8
+70204,East Arnhem,2011,9.9
+70204,East Arnhem,2016,8.9
+70204,East Arnhem,2021,9.3
+70205,Katherine,2011,9
+70205,Katherine,2016,9.6
+70205,Katherine,2021,11.7
+80101,Belconnen,2011,31.7
+80101,Belconnen,2016,34.9
+80101,Belconnen,2021,40.3
+80103,Canberra East,2011,10.4
+80103,Canberra East,2016,9.6
+80103,Canberra East,2021,15.2
+80104,Gungahlin,2011,33.9
+80104,Gungahlin,2016,37.6
+80104,Gungahlin,2021,42.9
+80105,North Canberra,2011,45
+80105,North Canberra,2016,47.3
+80105,North Canberra,2021,53.6
+80106,South Canberra,2011,49
+80106,South Canberra,2016,52.1
+80106,South Canberra,2021,57.7
+80107,Tuggeranong,2011,22.3
+80107,Tuggeranong,2016,24.4
+80107,Tuggeranong,2021,28.7
+80108,Weston Creek,2011,35.8
+80108,Weston Creek,2016,37.5
+80108,Weston Creek,2021,42.6
+80109,Woden Valley,2011,41.6
+80109,Woden Valley,2016,44.3
+80109,Woden Valley,2021,50.4
+80110,Molonglo,2011,60
+80110,Molonglo,2016,48.9
+80110,Molonglo,2021,55.4
+80111,Uriarra - Namadgi,2011,26.4
+80111,Uriarra - Namadgi,2016,24.2
+80111,Uriarra - Namadgi,2021,30.6
+90101,Christmas Island,2011,8
+90101,Christmas Island,2016,10.2
+90101,Christmas Island,2021,11.2
+90102,Cocos (Keeling) Islands,2011,8.8
+90102,Cocos (Keeling) Islands,2016,11.2
+90102,Cocos (Keeling) Islands,2021,9.4
+90103,Jervis Bay,2011,13.8
+90103,Jervis Bay,2016,19.4
+90103,Jervis Bay,2021,14.2
+90104,Norfolk Island,2011,0
+90104,Norfolk Island,2016,13.8
+90104,Norfolk Island,2021,16.1
