@@ -12,7 +12,7 @@
   },
 
   "data": {
-    "url": "../Data/population_pyramid.csv"
+    "url": "Data/population_pyramid.csv"
   },
 
   "params": [

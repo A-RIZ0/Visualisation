@@ -8,7 +8,7 @@
   },
 
   "data": {
-    "url": "../Data/employment_share.csv"
+    "url": "Data/employment_share.csv"
   },
 
   "transform": [

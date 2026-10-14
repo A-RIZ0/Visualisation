@@ -23,7 +23,7 @@
   "layer": [
     {
       "data": {
-        "url": "../Data/SA3_2021_AUST_GDA2020.json",
+        "url": "Data/SA3_2021_AUST_GDA2020.json",
         "format": {
           "type": "topojson",
           "feature": "states"
@@ -39,7 +39,7 @@
 
     {
       "data": {
-        "url": "../Data/education_tiles.csv"
+        "url": "Data/education_tiles.csv"
       },
 
       "transform": [

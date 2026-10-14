@@ -5,7 +5,7 @@
   "height": 600,
 
   "data": {
-    "url": "../Data/SA2_2021_AUST_GDA2020.json",
+    "url": "Data/SA2_2021_AUST_GDA2020.json",
     "format": {
       "type": "topojson",
       "feature": "SA2_2021_AUST_GDA2020"
@@ -17,7 +17,7 @@
       "lookup": "properties.SA2_CODE21",
       "from": {
         "data": {
-          "url": "../Data/population_map.csv"
+          "url": "Data/population_map.csv"
         },
         "key": "region_id",
         "fields": [
