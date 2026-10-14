@@ -12,7 +12,7 @@
   },
 
   "data": {
-    "url": "../data/education_heatmap.csv"
+    "url": "data/education_heatmap.csv"
   },
 
   "transform": [
