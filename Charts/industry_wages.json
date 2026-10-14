@@ -20,7 +20,7 @@
   ],
 
   "data": {
-    "url": "data/industry_wages.csv"
+    "url": "../data/industry_wages.csv"
   },
 
   "transform": [
