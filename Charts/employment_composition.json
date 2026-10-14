@@ -17,7 +17,7 @@
   ],
 
   "data": {
-    "url": "../data/employment_composition.csv"
+    "url": "../Data/employment_composition.csv"
   },
 
   "transform": [
