@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "width": 700,
-  "height": 350,
+  "width": "container",
+  "height": 420,
   "data": {
     "url": "Data/education_preuni.csv"
   },
@@ -10,6 +10,9 @@
       "calculate": "toNumber(replace(datum.population_total, ',', ''))",
       "as": "population"
     },
+    {
+  "filter": "datum.completed_year != 'Did not go to school'"
+},
     {
       "joinaggregate": [
         {
@@ -23,8 +26,14 @@
     {
       "calculate": "datum.population / datum.year_total",
       "as": "share"
-    }
+    },
+ {
+"calculate": "datum.completed_year == 'Did not go to school' ? 'No school' : datum.completed_year == 'Year 8 or below ' ? 'Year 8 / Below' : datum.completed_year == 'Year 9 or equivalent' ? 'Year 9' : datum.completed_year == 'Year 10 or equivalent' ? 'Year 10' : datum.completed_year == 'Year 11 or equivalent' ? 'Year 11' : 'Year 12'",
+"as": "short_label"
+}
   ],
+
+  
   "layer": [
     {
       "mark": {
@@ -54,8 +63,22 @@
           "type": "nominal",
           "title": "Highest Year Completed",
           "scale": {
-            "scheme": "tableau10"
-          },
+  "domain": [
+    "Year 8 or below ",
+    "Year 9 or equivalent",
+    "Year 10 or equivalent",
+    "Year 11 or equivalent",
+    "Year 12 or equivalent"
+  ],
+  "range": [
+    "#56B4E9",
+    "#009E73",
+    "#0072B2",
+    "#E69F00",
+    "#D55E00"
+  ]
+},
+          
           "sort": [
             "Did not go to school",
             "Year 8 or below ",
@@ -105,7 +128,7 @@
           "type": "quantitative"
         },
         "text": {
-          "field": "completed_year"
+          "field": "short_label"
         },
         "color": {
           "field": "completed_year",

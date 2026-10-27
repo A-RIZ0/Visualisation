@@ -2,19 +2,19 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
 
   "width": "container",
-  "height": 600,
+  "height": 420,
 
   "data": {
-    "url": "Data/SA2_2021_AUST_GDA2020.json",
+    "url": "Data/SA4_2021_AUST_GDA2020.json",
     "format": {
       "type": "topojson",
-      "feature": "SA2_2021_AUST_GDA2020"
+      "feature": "SA4_2021_AUST_GDA2020"
     }
   },
 
   "transform": [
     {
-      "lookup": "properties.SA2_CODE21",
+      "lookup": "properties.SA4_CODE21",
       "from": {
         "data": {
           "url": "Data/population_map.csv"
@@ -30,7 +30,7 @@
   ],
 
   "projection": {
-    "type": "equalEarth"
+    "type": "mercator"
   },
 
   "mark": {
@@ -42,13 +42,13 @@
   "encoding": {
     "color": {
       "condition": {
-        "test": "datum.growth_pct != null",
+        "test": "datum.growth_pct != null", 
         "field": "growth_pct",
         "type": "quantitative",
         "title": "Population Growth (%)",
         "scale": {
           "scheme": "redblue",
-          "domain": [-100, 100],
+          "domain": [-15, 40],
           "domainMid": 0,
           "clamp": true
         }
@@ -58,7 +58,7 @@
 
     "tooltip": [
       {
-        "field": "properties.SA2_NAME21",
+        "field": "properties.SA4_NAME21",
         "type": "nominal",
         "title": "Region"
       },

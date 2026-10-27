@@ -1,59 +1,116 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
 
+  "width": "container",
+  "height": 451,
+
   "data": {
-    "values": [
-      {"Year": 2011, "FamilyType": "Couple family without children", "Percentage": 37.8},
-      {"Year": 2011, "FamilyType": "Couple family with children", "Percentage": 44.6},
-      {"Year": 2011, "FamilyType": "One parent family", "Percentage": 15.9},
-      {"Year": 2011, "FamilyType": "Other family", "Percentage": 1.7},
-
-      {"Year": 2016, "FamilyType": "Couple family without children", "Percentage": 37.8},
-      {"Year": 2016, "FamilyType": "Couple family with children", "Percentage": 44.7},
-      {"Year": 2016, "FamilyType": "One parent family", "Percentage": 15.8},
-      {"Year": 2016, "FamilyType": "Other family", "Percentage": 1.7},
-
-      {"Year": 2021, "FamilyType": "Couple family without children", "Percentage": 38.8},
-      {"Year": 2021, "FamilyType": "Couple family with children", "Percentage": 43.7},
-      {"Year": 2021, "FamilyType": "One parent family", "Percentage": 15.9},
-      {"Year": 2021, "FamilyType": "Other family", "Percentage": 1.6}
-    ]
+    "url": "Data/family_composition.csv"
   },
 
-  "mark": "bar",
+  "layer": [
+    {
+      "mark": {
+        "type": "bar"
+      },
+      "encoding": {
+        "y": {
+          "field": "FamilyType",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+          
+        },
 
-  "encoding": {
-    "x": {
-      "field": "FamilyType",
-      "type": "nominal",
-      "title": "Family Type",
-      "sort": "-y",
-      "axis": {
-        "labelAngle": -20
+        "x": {
+          "field": "Change",
+          "type": "quantitative",
+          "title": "Change in Share (%), 2011-2021"
+        },
+
+        "color": {
+          "condition": {
+            "test": "datum.Change > 0",
+            "value": "#59a14f"
+          },
+          "value": "#e15759"
+        }
       }
     },
-    "xOffset": {
-      "field": "Year"
-    },
-    "y": {
-      "field": "Percentage",
-      "type": "quantitative",
-      "title": "Percentage (%)"
-    },
-    "color": {
-      "field": "Year",
-      "type": "nominal",
-      "scale": {
-        "range": ["#1f77b4", "#ff7f0e", "#2ca02c"]
+
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        }
       }
     },
-    "tooltip": [
-      {"field": "Year"},
-      {"field": "FamilyType"},
-      {"field": "Percentage", "format": ".1f"}
-    ]
-  },
 
-  "width": 500,
-  "height": 300
+    {
+      "mark": {
+        "type": "text",
+        "dx": 8,
+        "align": "left",
+        "fontSize": 11
+      },
+      "transform": [
+        {
+          "filter": "datum.Change >= 0"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "FamilyType",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "Change",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Change",
+          "format": "+.1f"
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "dx": 0,
+        "align": "right",
+        "fontSize": 11
+      },
+      "transform": [
+        {
+          "filter": "datum.Change < 0"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "FamilyType",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "Change",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Change",
+          "format": "+.1f"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
 }

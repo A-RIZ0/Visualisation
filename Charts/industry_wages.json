@@ -1,11 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
 
-  "width": 700,
-
-  "height": {
-    "step": 45
-  },
+  "width": "container",
+  "height": 488,
 
   "params": [
     {
@@ -25,8 +22,9 @@
 
   "transform": [
     {
-      "filter": "datum.year == selectedYear"
+      "filter": "toNumber(datum.year) == selectedYear"
     },
+
     {
       "window": [
         {
@@ -41,6 +39,7 @@
         }
       ]
     },
+
     {
       "filter": "datum.rank <= 5"
     }
@@ -50,8 +49,11 @@
     "y": {
       "field": "industry",
       "type": "nominal",
-      "sort": "-x",
-      "title": null
+      "title": null,
+      "sort": {
+        "field": "rank",
+        "order": "ascending"
+      }
     }
   },
 

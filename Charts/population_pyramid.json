@@ -6,10 +6,6 @@
   "width": "container",
   "height": 420,
 
-  "autosize": {
-    "type": "fit",
-    "contains": "padding"
-  },
 
   "data": {
     "url": "Data/population_pyramid.csv"

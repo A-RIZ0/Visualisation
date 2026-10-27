@@ -2,344 +2,315 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>How Australia Changed | Census 2011-2021</title>
-
-    <!-- =========================
-         VEGA / VEGA-LITE
-    ========================== -->
+    <meta
+      name="description"
+      content="An interactive look at how Australia's population, education, employment, family and income changed between the 2011, 2016 and 2021 Censuses."
+    />
+    <title>How Australia Changed | Australian Census 2011-2021</title>
 
     <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
 
-    <!-- =========================
-         CSS
-    ========================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <!-- =========================
-         HERO / INTRODUCTION
-    ========================== -->
-
-    <header class="hero">
-      <div class="hero-inner">
-        <p class="eyebrow">AUSTRALIAN CENSUS · 2011 · 2016 · 2021</p>
-
-        <h1>How Australia Changed</h1>
-
-        <p class="hero-subtitle">
-          Exploring population, education, employment, family.
-        </p>
-
-        <p class="hero-intro">
-          Australia has seen significant change between 2011 and 2021, we are here to highlight them.
-        </p>
-
-        <div class="year-row" aria-label="Census years">
-          <span>2011</span>
-
-          <span class="year-arrow"> </span>
-
-          <span>2016</span>
-
-          <span class="year-arrow"> </span>
-
-          <span>2021</span>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <!-- =========================
-             SECTION 1: POPULATION
-        ========================== -->
-
-      <section class="story-section">
-        <div class="section-heading">
-          <p class="section-number">01 · POPULATION</p>
-
-          <p>
-            Population growth was not evenly distributed across the country.
-            Explore where Australia's population changed most between 2011 and
-            2021.
+    <div class="page-frame">
+      <header class="hero">
+        <div class="hero-inner">
+          <h1>How Australia Changed In A Decade</h1>
+          <p class="hero-subtitle">
+            age, education, employment, population, family structure, language and income across a decade
+            of Census data.
+          </p>
+          <p class="hero-intro">
+            Australia changed in many ways between 2011 and 2021. These
+            visualisations explore where those changes happened, which groups
+            experienced them, and how the patterns differ across the country.
           </p>
         </div>
+      </header>
 
-        <div class="viz-layout">
-          <!-- =========================
-                     IDIOM 01
-                ========================== -->
+      <main>
+        <section class="story-section" id="population">
+          <div class="section-heading">
+            <h2>
+              Age Growth (2011 - 2021)
+            </h2>
+          </div>
 
-          <article class="chart-card">
-            <div class="chart-header">
-              <h3>Population change across Australia</h3>
+          <div class="viz-layout">
+            <article class="chart-card">
+              <div class="chart-header">
+                <h3>Median Age Growth Across Australia</h3>
+                <p>
+                  Across Australia while median age did not always change from 2011 to 2016,<br><strong>All</strong> median age 
+                  increased by at least <strong>1 year</strong> by 2021. 
+                </p>
+              </div>
+              <div
+                class="chart-container"
+                id="median-age"
+              ></div>
+            </article>
 
-              <p>Percentage change in population by region, 2011-2021. Areas with 0 
-                population in 2011 are a result of new government classifications for certain statistical areas
+            <article class="chart-card">
+              <div class="chart-header">
+                <h3>Age Groups Across Australia</h3>
+                <p>
+                  While growth was not equal among different age-groups, <strong>every</strong> age group<br> showed some growth across the decade.
+                </p>
+              </div>
+              <div
+                class="chart-container"
+                id="population-pyramid"
+              ></div>
+            </article>
+       
+            
+
+        </section>
+
+        <section class="story-section" id="education">
+          <div class="section-heading">
+            <h2>
+              Secondary & Tertiary Education Growth (2011 - 2021)
+            </h2>
+
+          </div>
+
+          <div class="viz-layout">
+            <article class="chart-card">
+              <div class="chart-header">
+                <h3>(%) Australians With Bachelors or Above By State</h3>
+                <p>
+                  Among all states, <strong>ACT</strong> has the highest percentage of people with <br>
+                  either a bachelor or above certification out of people with qualifications <strong>(60.1%)</strong>.
+                </p>
+              </div>
+              <div
+                class="chart-container"
+                id="education-heatmap"
+              ></div>
+              <p class="chart-caption">
+                Data shows the percentage of qualification-holders aged 15+ with a bachelor's<br>
+                 degree or higher certificate per state (excludes individuals without qualifications).
               </p>
-            </div>
+            </article>
 
-            <div class="chart-container" id="population-map"></div>
-          </article>
+            <article class="chart-card">
+              <div class="chart-header">
+                <h3>(%) Australians That Have Completed Secondary Education</h3>
+                <p>
+                  Education levels have improved across the decade with <strong>Year 12</strong> completion increasing <br> by
+                  <strong style="color: green;">(8.7%)</strong> from <strong>52%</strong> to <strong>60.7%</strong> and other levels decreasing. 
+                  
 
-          <!-- =========================
-                     IDIOM 02
-                ========================== -->
-
-          <article class="chart-card">
-            <div class="chart-header">
-              <h3>Australia's changing age structure (2011 - 2021)</h3>
-            </div>
-
-            <div class="chart-container" id="population-pyramid"></div>
-          </article>
-        </div>
-      </section>
-
-      <!-- =========================
-             SECTION 2: EDUCATION
-        ========================== -->
-
-      <section class="story-section">
-        <div class="section-heading">
-          <p class="section-number">02 · EDUCATION</p>
-
-          <h2>PlaceHolder</h2>
-
-          <p>
-            PlaceHolder
-          </p>
-        </div>
-
-        <div class="viz-layout">
-          <article class="chart-card">
-            <div class="chart-header">
-
-              <h3>Higher education over time</h3>
-
-              <p>Bachelor degree or above by state and Census year.</p>
-            </div>
-
-            <div class="chart-container" id="education-heatmap"></div>
-          </article>
-
-          <article class="chart-card">
-            <div class="chart-header">
-
-              <h3>Where is higher education concentrated?</h3>
-
-              <p>Regional differences in Bachelor degree attainment.</p>
-            </div>
-
-            <div class="chart-container" id="education-map"></div>
-          </article>
-        </div>
-      </section>
-
-      <!-- =========================
-             SECTION 3: EMPLOYMENT
-        ========================== -->
-
-      <section class="story-section">
-        <div class="section-heading">
-          <p class="section-number">03 · EMPLOYMENT</p>
-
-          <h2>Australia's workforce changed with its population</h2>
-
-          <p>
-            Changes in industry reveal how the work Australians do has evolved
-            between Census years.
-          </p>
-        </div>
-
-        <div class="viz-layout">
-          <article class="chart-card">
-            <div class="chart-header">
-
-              <h3>How Australia's industries changed</h3>
-
-              <p>Employment by broad industry across Census years.</p>
-            </div>
-
-            <div
-              class="chart-container chart-container-tall"
-              id="employment-dumbbell"
-            ></div>
-          </article>
-
-          <article class="chart-card">
-            <div class="chart-header">
-
-              <h3>How has employment changed over a decade</h3>
-              <p>Industries were grouped into broader categories based on similarity to reduce visual clutter and improve interpretability.
-                 This approach makes visualisations such as donut charts easier to read by limiting the number of individual categories 
-                 displayed. 
+                </p>
+              </div>
+              <div
+                class="chart-container"
+                id="education-preuni"
+              ></div>
+              <p class="chart-caption">
+                Data includes equivalent education levels for year levels 8 and above.
               </p>
-            </div>
+            </article>
+            
 
-            <div
-              class="chart-container chart-container-tall"
-              id="employment-composition"
-            ></div>
-          </article>
-        </div>
-      </section>
+          </div>
+          <div class="section-transition">
 
-      <!-- =========================
-             SECTION 4: REGIONAL DIFFERENCES
-        ========================== -->
+          </div>
+        </section>
 
-      <section class="story-section">
-        <div class="section-heading">
-          <p class="section-number">PlaceHolder</p>
+        <section class="story-section" id="employment">
+          <div class="section-heading">
+            <h2>How Australia's Industries have evolved (2011 - 2021)</h2>
 
-          <h2>PLACEHOLDER</h2>
+          </div>
 
-        </div>
+          <div class="viz-layout">
+            <article class="chart-card">
+              <div class="chart-header">
+                <h3>Industry Employment Out of All Australian Industries (%) </h3>
+                <p>Among the eight largest industries, <strong>Health Care </strong>saw the biggest growth <strong style="color: green"> (+2.93%) </strong> 
+                  and<br> <strong>Manufacturing</strong> the biggest decline </strong><strong style="color: red">(-3.05%)</strong> in their share of total employment across all 
+                  <br>industries.</p>
+              </div>
+              <div
+                class="chart-container chart-container-tall"
+                id="employment-dumbbell"
+              ></div>
+              <p class="chart-caption">
+                Employment Share (%) was calculated using total number of employees<br>
+                from all industries.
+              </p>
+            </article>
 
-        <div class="viz-layout">
-          <article class="chart-card">
-            <div class="chart-header">
+            <article class="chart-card">
+              <div class="chart-header">
+                <h3>Total Employee Share (%) of Broad Industries</h3>
+                <p>
+                  The <strong>Public & Community Services</strong> sector has shown <br>
+                    the biggest growth in employment share <strong style="color: green">(4.26%)</strong> while the <strong>Trade Transport & <br>
+                    Hospitality</strong> sector has shown the biggest decline <strong style="color: red"> (-2.58%) </strong>
+                </p>
+              </div>
+              <div
+                class="chart-container chart-container-tall"
+                id="employment-composition"
+              ></div>
+              <p class="chart-caption">
+                The number of individual industries grouped within each category varies. Share percentages 
+                <br>reflect the collective size of the structural group, not an equal distribution of sectors
+              </p>
+            </article>
 
-              <h3>Year 12 Completion for students (Does not include post school statistics)</h3>
+          </div>
+          <div class="section-transition">
 
-              <p>PlaceHolder.</p>
-            </div>
+          </div>
+        </section>
 
-            <div
-              class="chart-container chart-container-tall"
-              id="education-preuni"
-            ></div>
-          </article>
 
-          <article class="chart-card">
-            <div class="chart-header">
-              <h3>Median Age Ranking Over States & territories</h3>
+        <section class="story-section" id="family">
+          <div class="section-heading">
+            <h2>
+              Family & Population Change (2011 - 2021)
+            </h2>
 
-              <p>State and territory median-age rankings over time.</p>
-            </div>
+          </div>
 
-            <div class="chart-container" id="median-age"></div>
-          </article>
-        </div>
-      </section>
-
-      <!-- =========================
-             SECTION 5: FAMILY
-        ========================== -->
-
-      <section class="story-section">
-        <div class="section-heading">
-          <p class="section-number">PlaceHolder</p>
-
-          <h2>PlaceHolder</h2>
-
-          <p>
-         PlaceHolder
-          </p>
-        </div>
-
-        <div class="viz-layout">
-          <article class="chart-card">
-            <div class="chart-header">
-
-              <h3>Changing family structure</h3>
-
-              <p>Compare selected family types between Census years.</p>
-            </div>
-
-            <div class="chart-container" id="family-bar"></div>
-          </article>
-
-          <article class="chart-card text-card">
-            <div class="insight-label">PLACEHOLDER</div>
-
-            <h3>PlaceHolder</h3>
+          <div class="viz-layout viz-layout-family">
+            <article class="chart-card">
+              <div class="chart-header">
+                <h3>Family Structure Change (%)</h3>
+                <p>
+                  Across the decade, couples with children <strong>declined</strong> <strong style="color: red">(-0.9%)</strong> and Couples without <br>
+                  children <strong>increased</strong> <strong style="color: green">(+1.0%)</strong> with other family types showing marginal changes like <br>
+                  <strong style="color: red">(-0.1%)</strong> or no changes.
+                </p>
+              </div>
+              <div
+                class="chart-container"
+                id="family-bar"
+              ></div>
+            </article>
+            <article class="chart-card">
+              <div class="chart-header">
+                <h3>Population Change Australia (%)</h3>
+                <p>
+                  While some locations like the outback did not see much population change <br>
+                  besides slight declines in Queensland & South Australia <strong style="color: red;">(-3.7%)</strong>, city regions like Melbourne <br> saw large increases 
+                  in population across the decade of up to <strong style="color: green">(38.5%)</strong>.
+                </p>
+              </div>
+              <div
+                class="chart-container"
+                id="population-map"
+              ></div>
+            </article>
+            
 
           
-          </article>
-        </div>
-      </section>
+          </div>
 
-      <!-- =========================
-             SECTION 6: LANGUAGE
-        ========================== -->
+        </section>
 
-      <section class="story-section">
-        <div class="section-heading">
-          <p class="section-number">PlaceHolder</p>
+        <section class="story-section" id="income">
+          <div class="section-heading">
+            <h2>How Earnings & Family Incomes Have Changed (2011 - 2021)</h2>
 
-          <h2>PlaceHolder</h2>
+          </div>
 
-          <p>
-            PlaceHolder
+          <div class="viz-layout">
+            <article class="chart-card">
+              <div class="chart-header">
+                <h3>Top 5 Industries By Average Weekly Earnings ($)</h3>
+                <p>
+                  Across the decade, <strong>Mining</strong> has remained at the<strong> top</strong>  of earnings with <br>
+                    Financial & Insurance Services and Information Media entering the top 5 from 
+                    <br>2016 onwards. 
+
+                </p>
+              </div>
+              <div
+                class="chart-container"
+                id="industry-income"
+              ></div>
+
+            </article>
+            <article class="chart-card">
+              <div class="chart-header">
+                <h3>Median Weekly Family Income ($) Equivalised By State</h3>
+                <p>
+                  Median family income has shown growth throughout every state, with <br>
+                  <strong>ACT having the highest</strong> across the different years and <br>
+                  having the largest increase of an additonal <strong>($374)</strong> from 2011 
+                </p>
+              </div>
+              <div
+                class="chart-container"
+                id="income-map"
+              ></div>
+
+            </article>
+          </div>
+        </section>
+        <section class="story-section" id="population">
+          <div class="section-heading">
+            <h2>
+              Language Growth (2011 - 2021) & Conclusion
+            </h2>
+          </div>
+
+          <div class="viz-layout">
+            <article class="chart-card">
+              <div class="chart-header">
+                <h3>Number Of Second Language Speakers </h3>
+                <p>Across the years, the number of people in Australia that can <br>
+                speak multiple languages have increased.</p>
+              </div>
+              <div
+                class="chart-container"
+                id="language-map"
+              ></div>
+            </article>
+
+            <article class="chart-card">
+              <div class="conclusion">
+                <h2>Conclusion</h2>
+                <p>
+            The Census offers several connected views of change: where
+            population and age grew, how education and employment evolved, how family
+            structures shifted, how language has grown and how income differs by place. Read together, these
+            patterns show how Australia changed throughout a decade through 
+             both broad trends and local differences.
           </p>
-        </div>
+              </div>
+            </article>
+            
+      </main>
 
-        <div class="viz-layout">
-          <article class="chart-card">
-            <div class="chart-header">
-
-              <h3>Top 5 industries by average weekly earnings</h3>
-
-              <p>
-                PlaceHolder
-              </p>
-            </div>
-
-            <div class="chart-container" id="industry-income"></div>
-          </article>
-
-          <article class="chart-card">
-            <div class="chart-header">
-
-              <h3>Median Weekly Family Income </h3>
-
-              <p>
-                PlaceHolder
-              </p>
-            </div>
-
-            <div class="chart-container" id="income-map"></div>
-          </article>
-        </div>
-      </section>
-
-      <!-- =========================
-             CONCLUSION
-        ========================== -->
-
-      <section class="conclusion">
-        <p class="section-number">CONCLUSION</p>
-
-        <h2>PLACEHOLDER</h2>
-
+      <footer class="footer">
         <p>
-          PLACEHOLDER
+          FIT3179 Data Visualisation 2 - Abbas Rizai - October 2026
+          <br>References:
+          <br>Australian Bureau of Statistics: Census Datapacks https://www.abs.gov.au/census/find-census-data/datapacks
+          <br>Australian Bureau of Statistics: Data By Region https://www.abs.gov.au/census/find-census-data/search-by-area
+          
         </p>
-
-      </section>
-    </main>
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer class="footer">
-      <p>Australian Census visualisation · Vega-Lite</p>
-    </footer>
-
-    <!-- =========================
-         VEGA-LITE CHARTS
-    ========================== -->
+      </footer>
+    </div>
 
     <script>
       vegaEmbed("#population-pyramid", "Charts/population_pyramid.json", {
@@ -360,9 +331,13 @@
         actions: false
       });
 
-      vegaEmbed("#employment-composition", "Charts/employment_composition.json", {
-        actions: false
-      });
+      vegaEmbed(
+        "#employment-composition",
+        "Charts/employment_composition.json",
+        {
+          actions: false
+        }
+      );
       vegaEmbed("#family-bar", "Charts/family_composition.json", {
         actions: false
       });
@@ -375,10 +350,9 @@
       vegaEmbed("#income-map", "Charts/income_map.json", {
         actions: false
       });
-      vegaEmbed("#education-map", "Charts/education_map.json", {
+      vegaEmbed("#language-map", "Charts/language_map.json", {
         actions: false
       });
-
     </script>
   </body>
 </html>

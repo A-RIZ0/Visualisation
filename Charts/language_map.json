@@ -2,10 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
 
   "width": "container",
-  "height": 600,
+  "height": 320,
 
   "projection": {
-    "type": "equalEarth"
+    "type": "mercator"
   },
 
   "params": [
@@ -26,7 +26,7 @@
         "url": "Data/SA3_2021_AUST_GDA2020.json",
         "format": {
           "type": "topojson",
-          "feature": "states"
+          "feature": "SA3_2021_AUST_GDA2020"
         }
       },
       "mark": {
@@ -39,22 +39,20 @@
 
     {
       "data": {
-        "url": "Data/education_tiles.csv"
+        "url": "Data/language_density_dots.csv"
       },
 
       "transform": [
         {
-          "filter": "datum.Year == selectedYear && isValid(datum.Education_Attainment)"
+          "filter": "datum.Year == selectedYear"
         }
       ],
 
       "mark": {
-        "type": "point",
-        "shape": "M 0,-1 L 0.866,-0.5 L 0.866,0.5 L 0,1 L -0.866,0.5 L -0.866,-0.5 Z",
-        "filled": true,
-        "size": 300,
-        "stroke": "white",
-        "strokeWidth": 0.7
+        "type": "circle",
+        "size": 18,
+        "opacity": 0.7,
+        "color": "#4C78A8"
       },
 
       "encoding": {
@@ -66,17 +64,6 @@
         "latitude": {
           "field": "latitude",
           "type": "quantitative"
-        },
-
-        "color": {
-          "field": "Education_Attainment",
-          "type": "quantitative",
-          "title": "Education attainment (%)",
-          "scale": {
-            "type": "quantize",
-            "domain": [0, 50],
-            "scheme": "blues"
-          }
         },
 
         "tooltip": [
@@ -91,13 +78,68 @@
           {
             "field": "Year",
             "title": "Census year"
-          },
-          {
-            "field": "Education_Attainment",
-            "title": "Education attainment (%)",
-            "format": ".1f"
           }
         ]
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 111,
+            "lat": -43
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "circle",
+        "size": 70,
+        "color": "#4C78A8"
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "lon"
+        },
+        "latitude": {
+          "field": "lat"
+        }
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 114,
+            "lat": -43,
+            "label": " 20,000 people speaking another language"
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 12,
+        "color": "#333"
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "lon"
+        },
+
+        "latitude": {
+          "field": "lat"
+        },
+
+        "text": {
+          "field": "label"
+        }
       }
     }
   ],

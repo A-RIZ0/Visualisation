@@ -1,13 +1,5 @@
-Year,FamilyType,Percentage
-2011,Couple family without children,37.8
-2011,Couple family with children,44.6
-2011,One parent family,15.9
-2011,Other family,1.7
-2016,Couple family without children,37.8
-2016,Couple family with children,44.7
-2016,One parent family,15.8
-2016,Other family,1.7
-2021,Couple family without children,38.8
-2021,Couple family with children,43.7
-2021,One parent family,15.9
-2021,Other family,1.6
+FamilyType,Change
+Couple family without children,1.0
+Couple family with children,-0.9
+One parent family,0.0
+Other family,-0.1

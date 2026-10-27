@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
 
   "width": "container",
-  "height": 600,
+  "height": 420,
 
   "projection": {
     "type": "mercator"
@@ -53,8 +53,8 @@
           "as": "Year"
         },
         {
-  "filter": "isValid(datum.SelectedIncome) && datum.SelectedIncome > 0 && isValid(datum.Longitude) && isValid(datum.Latitude) && isValid(datum.STE_NAME21) && datum.STE_NAME21 != '' && datum.STE_NAME21 != 'Other Territories'"
-}
+          "filter": "isValid(datum.SelectedIncome) && datum.SelectedIncome > 0 && isValid(datum.Longitude) && isValid(datum.Latitude) && isValid(datum.STE_NAME21) && datum.STE_NAME21 != '' && datum.STE_NAME21 != 'Other Territories'"
+        }
       ],
 
       "mark": {
@@ -81,11 +81,12 @@
           "type": "quantitative",
           "title": "Median weekly family income ($)",
           "scale": {
-            "range": [40, 900]
+            "range": [100, 4000]
           },
           "legend": {
             "orient": "bottom",
-            "direction": "horizontal"
+            "direction": "horizontal",
+            "values": [750, 1000, 1250, 1500]
           }
         },
 

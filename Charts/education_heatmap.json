@@ -4,12 +4,7 @@
   "description": "Heatmap showing the percentage of people aged 15 years and over with a non-school qualification who have a Bachelor degree level or above, across Australian states and territories and Census years.",
 
   "width": "container",
-  "height": 420,
-
-  "autosize": {
-    "type": "fit-x",
-    "contains": "padding"
-  },
+  "height": 444,
 
   "data": {
     "url": "Data/education_heatmap.csv"
@@ -81,7 +76,7 @@
           "field": "EducationPercentage",
           "type": "quantitative",
 
-          "title": "Bachelor degree level or above (%)",
+          "title": "Bachelor+ (%)",
 
           "scale": {
             "scheme": "blues"

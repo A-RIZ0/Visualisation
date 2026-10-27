@@ -3,9 +3,7 @@
 
   "width": "container",
 
-  "height": {
-    "step": 65
-  },
+  "height": 420,
 
   "data": {
     "url": "Data/employment_share.csv"
